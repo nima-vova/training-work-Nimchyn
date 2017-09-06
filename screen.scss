@@ -1,0 +1,385 @@
+@import 'reset'; 
+
+a{
+  text-decoration: none;  
+  color: black;
+}
+
+$corporate-color: rgb(243, 107, 73);
+$main-color-font: rgb(156, 156, 156);
+
+@mixin centerBlocksParent{
+    text-align: center;    
+    white-space: nowrap;    
+    overflow: hidden;  
+}
+
+@mixin centerBlocksChild{
+  display: inline-block;
+  vertical-align: middle;
+  white-space: normal;
+  letter-spacing: normal;
+}
+
+.textDescriptionInblock{
+line-height: 1.5;
+color: $main-color-font;
+/*font-size: 14px; */
+}
+
+#main{
+max-width: 1344px;	
+margin: 0 auto; 
+font-family: Ubuntu, "times new roman", times, roman, serif; 
+font-style: medium; 
+}
+
+.imgCenter{
+display: block;
+ margin: 0 auto;  
+}
+/*begin head*/
+
+#header{
+	background-color: white;	
+	padding:31px 142px 35px 115px;
+}
+
+#logo{
+display: block;	
+float: left; 
+font-size: 22px;
+font-weight: 500;  	
+}
+#spanUi{
+color: $corporate-color; 	
+}
+nav{
+margin-top: 5px; 
+word-spacing: 35px;
+text-align: right;
+font-size: 14px;
+font-weight: 500;
+height: 17px;
+}
+
+.menuMain{
+display:inline-block;
+}
+
+.spanMenu{
+display: block;
+word-spacing: normal;
+letter-spacing: 0.3px;
+}
+
+.imgHover{
+margin: 0 auto;	
+/*float: left;*/
+display: none;	
+line-height: 0;
+}
+
+#activeMenu .imgHover {
+display: block;
+}
+
+#activeMenu .spanMenu {
+border-bottom: 2px solid $corporate-color;
+
+}
+
+/*end head*/
+
+/*begin slider */
+
+#slider{
+    height: 589px;
+	background: url(img/Layer1.jpg) 0 0 no-repeat;
+}
+
+#slider_main{
+  @include centerBlocksParent;
+  height: 489px;
+  background: url(img/slider_img_tmp.jpg)0 0 no-repeat;
+  letter-spacing: 315px;      
+}
+
+.sliderChild{
+margin-top: 160px;
+@include centerBlocksChild;	
+/*display: inline-block;
+vertical-align: middle;
+*/
+text-align: center;
+}
+
+#sliderChildMain{
+
+padding-top: 40px;
+}
+
+.sliderChildMainText{
+display: block;
+margin:10px auto;
+}
+
+#slider_footer{
+height: 100px;
+background: url(img/Layer1.jpg) 0 0 no-repeat;
+color: white;
+text-align: center;
+font-size: 18px;
+font-weight: 500;
+padding-top: 34px;
+word-spacing: 2px;
+}
+
+#textSliderFooter{
+font-size: 24px;
+border-bottom: 1px solid white;	
+}
+
+/*end slider*/
+
+/*begin mainContent */ 
+
+#mainContent{
+	background-color: rgb(255, 255, 255);
+  text-align: center;
+  padding-top: 50px; 
+}
+
+.CaptionText{ 
+  font-size: 26px;
+  font-weight:500; 
+  border-bottom: 2px solid $corporate-color;
+}
+
+.textInMainContent {
+  @extend .textDescriptionInblock;  
+  display: block;	
+  margin: 35px auto;
+  padding: 0 150px 0 150px;
+  /*line-height: 1.5;
+  color: $main-color-font;
+*/
+} 
+
+#parentMainContetUIBrush4{
+   @include centerBlocksParent;   
+   letter-spacing: 68px;   
+}
+.childMainContetUIBrush4{
+@include centerBlocksChild;
+height: 147px;
+width: 228px;
+
+margin-top:23px;
+margin-bottom: 50px; 
+
+font-size: 12px;
+font-weight:100;
+text-align:left; 
+/*white-space: normal;*/
+line-height: 1.5;
+
+/*letter-spacing: normal;*/
+color: $main-color-font;
+}
+
+.features{
+ display: block;
+ text-align: center;
+ font-size: 20px;
+ margin: 13px auto 12px auto;
+ color: black;  	
+}
+
+#textRecentProjects{
+@extend .textDescriptionInblock;
+display: block;
+margin-top: 24px;
+/*line-height: 1.5;
+color: $main-color-font;
+*/
+}
+
+#recentProjects{
+@include centerBlocksParent;
+margin-top: 27px;
+padding-bottom: 103px; 
+letter-spacing: 45px;
+}
+
+.portfolio{	
+@include centerBlocksChild;
+padding-top: 2px;  
+background: url(img/portfolio_numbers_fond.png) 0 0 no-repeat;
+width: 252px;
+height: 230px;
+
+
+/*white-space: normal;
+*/
+letter-spacing: 0em;
+text-align: right;
+line-height: 1.9;
+}
+.portfolioNumber{		
+	font-size: 15px;
+	font-weight: 500;	
+    padding-right: 22px;
+    word-spacing: 10px;    
+    color: rgb(254, 92, 50);
+    
+
+}
+.portfolioDescription{ 
+ font-size: 11px;
+ font-weight: 500;
+ padding-right: 22px;
+ word-spacing: 1px;
+ color: rgb(95, 95, 95); 
+}
+
+/* end mainContent */
+
+/*begin footer*/
+
+
+
+#talkToUs{
+height: 261px;
+padding-top: 77px;
+background-color: rgb(122, 122, 122);
+text-align: center;
+font-size: 14px;
+color: white;
+}
+
+.talk{
+display:inline-block;
+margin-bottom: 23px; 	
+font-size: 60px;
+}
+
+.toUs{
+color: $corporate-color;
+font-size: 60px;
+}
+
+#talkToUsSpanDescription{
+line-height: 1.7em;
+letter-spacing: 0.06em;	
+}
+
+#contactUs{
+text-align: center;
+padding-top: 110px;
+letter-spacing: 0.06em;	 	
+}
+
+#contactUsText{
+display: inline-block;	
+/*font-size: 26px;
+font-weight: 500; */
+margin-bottom: 23px;
+border-bottom: 2px solid $corporate-color;
+}
+#contactUsTextDescription{
+  @extend .textDescriptionInblock;
+  font-size: 14px;
+  line-height: 1.7em;
+}
+#contactDetails{
+  @include centerBlocksParent;
+  letter-spacing: 0px;
+  margin: 55px auto auto 83px;  
+}
+#mapImg{
+  @include centerBlocksChild;
+  width:568px; 
+  height: 520px;
+
+}
+
+#contactDetailsDescription{
+  @include centerBlocksChild;
+  width:685px;
+  height: 520px;
+  font-size: 12px;
+  font-weight:100;
+  text-align:left; 
+  /*white-space: normal;
+  letter-spacing: normal;
+  */
+}
+
+#contactDetailsCaption{
+padding-left: 25px;
+margin-bottom:18px; 
+text-align: left;
+font-size: 20px;
+font-weight:500;
+line-height: 1;
+}
+
+.contactDetailsBody{
+
+   padding-left: 70px;	
+   margin-bottom: 17px;
+   text-align: left;      
+   font-size: 15px;
+   font-weight: 400;
+   color: grey;   
+
+}
+.imgContactDetails{
+	display: inline-block;
+	float: left;	
+}
+
+.ContactDetails{
+ display: inline-block;
+ margin-left: 23px;
+ line-height: 1.5;
+}
+ 
+ #formContactUs{
+margin-top: 18px;
+line-height: 1.6; 
+}
+
+.inputInfo{
+display:inline-block;
+padding: 16px 13px; 
+font-size: 15px;
+font-weight: 400; 	
+color: $main-color-font;
+}
+
+#submitContactUs{
+display: block;
+margin-top: 14px; 
+height: 44px;
+width: 128px;
+background-image: url(img/submit.png);
+border: 0;
+color: white;
+font-size: 20px;
+font-weight: 200;
+
+}
+#copyright{
+margin: 220px auto 72px auto; 
+/*height: 56px;*/
+background-color: $corporate-color;
+text-align: center;
+color: white;
+font-size: 14px;
+font-weight: 400;
+vertical-align: middle;
+line-height: 56px; 
+}
+/*end footer*/
