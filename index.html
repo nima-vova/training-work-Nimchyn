@@ -1,171 +1,154 @@
 <!DOCTYPE html>
 <html lang="zxx">
 <head>
-	<meta charset="UTF-8">	
-	<link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Ubuntu:regular,bold&subset=Latin">
-	<link media="screen" rel="stylesheet" type="text/css" href="screen.css">	 
-	<title>Document</title>
+    <meta charset="UTF-8">    
+    <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Ubuntu:regular,bold&subset=Latin">
+    <link rel="stylesheet" href="//fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!--<link media="screen and (min-width: 900px)" rel="stylesheet" type="text/css" href="screen.css">
+	-->
+    <link media="" rel="stylesheet" type="text/css" href="mobile.css">
+    <title>Document</title>
 </head>
 <body>
-<div id="main">
-<div id="header">
-<div id="logo"><span id="spanUi">UI</span>Brush</div>
-<nav>
-    <div id="activeMenu" class=menuMain>
-    <span class="spanMenu"><a href="#">HOME</a></span>
-    <img  class="imgHover" alt="menu hover" src="img/menu_hover.png" width="7" height="4">
-    </div>
-	<div class=menuMain>
-	<span class="spanMenu"><a href="#">ABOUT US</a></span>
-	<img class="imgHover" alt="menu hover" src="img/menu_hover.png" width="7" height="4">
-	</div>
-	<div class=menuMain>
-	<span class="spanMenu"><a href="#">SERVICES</a></span>
-	<img class="imgHover" alt="menu hover" src="img/menu_hover.png" width="7" height="4">
-	</div>
-	<div class=menuMain>
-	<span class="spanMenu"><a href="#">PORTFOLIO</a></span>
-	<img class="imgHover" alt="menu hover" src="img/menu_hover.png" width="7" height="4">
-	</div>
-	<div class=menuMain>
-	<span class="spanMenu"><a href="#">CONTACT US</a></span>
-	<img class="imgHover" alt="menu hover" src="img/menu_hover.png" width="7" height="4">
-	</div>
-</nav>
-</div>
-<div id="slider">
-<div id="slider_main">	
-<a class="sliderChild" href="#">
-<img alt="next left" src="img/br_next_left.png" width="29" height="48"></a>
-<div class="sliderChild" id="sliderChildMain">
-<a class="sliderChildMainText" href="#">
-<img alt="welcome" src="img/slider_text_Welcome.png" width="370" height="50">
+    <main>
+        <header>            
+            <nav>
+                <div class="main-menu">
+                    <a href="#"> <i class="material-icons">menu</i></a>
+                </div>
+            </nav>
+            <div class="header-logo"><span class="ui">UI</span>Brush</div>
+        </header>
+            <div class="slider">
+            <div class="content">
+                <a class="navigation" href="#">
+<img alt="next left" class="next-content" src="img/br-next-left.png"></a>
+                <div class="navigation central-content">
+                    <a class="content-text" href="#">
+<img class="welcome-uibrush" alt="welcome" src="img/slider-text-welcome.png">
 </a>
-<a class="sliderChildMainText" href="#">
-<img alt="we provide" src="img/slider_text_we_provide.png" width="470" height="50">
+                    <a class="content-text" href="#">
+<img  class="welcome-uibrush" alt="we provide" src="img/slider-text-we-provide.png">
 </a>
-</div>
-<a class="sliderChild" href="#">
-<img alt="next right" src="img/br_next_right.png" width="29" height="48">
+                </div>
+                <a class="navigation" href="#">
+<img alt="next right"  class="next-content" src="img/br-next-right.png">
 </a>
-</div>
-<div id="slider_footer">
-Lorem ipsum dolor sit amet <span id ="textSliderFooter">
+            </div>
+            <div class="footer">                
+                Lorem ipsum dolor sit amet <a class="text-footer" href="#">
 	CONSECTETUER ADIPISCING ELIT
-</span> 	
-</div>
-</div>
-
-<div id="mainContent">
-	<span class="CaptionText">UIBrush</span>
-	<span class="textInMainContent">
+</a>
+            </div>
+        </div>
+        <div class="main-content">
+            <span class="caption">UIBrush</span>
+            <span class="caption-text">
 Lorem ipsum dolor sit amet, consectetur adipisicing alit, sad do eiusmod tempor incididunt at labore eturet dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi at aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cilium. 
 </span>
-<div id="parentMainContetUIBrush4">
-<div class="childMainContetUIBrush4">
-<img  class="imgCenter" alt="innovative design" src="img/innovative_design.png" width="30" height="24">
-<span class="features">Innovative Design</span>
-Lorem ipsum dolor sit amet, consectetur adipisicing alit, sad do eiusmod tempor incididunt at labore eturet dolore magna aliqua.
-</div>
-<div class="childMainContetUIBrush4">
-<img class="imgCenter" alt="clean coding" src="img/clean_coding.png" width="31" height="24">	
-<span class="features">Clean Coding</span>
-Lorem ipsum dolor sit amet, consectetur adipisicing alit, sad do eiusmod tempor incididunt at labore eturet dolore magna aliqua.
-</div>
-<div class="childMainContetUIBrush4">
-<img  class="imgCenter" alt="quick delivery" src="img/quick_delivery.png" width="24" height="25">
-<span class="features">Quick Delivery</span>
-Lorem ipsum dolor sit amet, consectetur adipisicing alit, sad do eiusmod tempor incididunt at labore eturet dolore magna aliqua.
-</div>
-<div class="childMainContetUIBrush4">
-<img class="imgCenter" alt="tel" src="img/tel.png" width="24" height="24">	
-<span class="features">Best Support</span>
-Lorem ipsum dolor sit amet, consectetur adipisicing alit, sad do eiusmod tempor incididunt at labore eturet dolore magna aliqua.
-</div>
-</div>
-<span class="CaptionText">Recent Projects</span>
-<span id="textRecentProjects">
-Lorem ipsum dolor sit amet, consectetur adipisicing alit, sad dv eiusmod tempor incididunt ut<br> labore eturet dolore magna aliqua. 
+            <div class="content-body">
+                    <div class="sections">                    
+                    <i class="material-icons sections-icons">view_list</i>
+                    <span class="sections-text">Innovative Design</span> Lorem ipsum dolor sit amet, consectetur adipisicing alit, sad do eiusmod tempor incididunt at labore eturet dolore magna aliqua.
+                </div>
+                <div class="sections">
+                    <i class="fa fa-code sections-icons"></i> <span class="sections-text">Clean Coding</span> Lorem ipsum dolor sit amet, consectetur adipisicing alit, sad do eiusmod tempor incididunt at labore eturet dolore magna aliqua.
+                </div>
+                <div class="sections">
+                    <i class="material-icons sections-icons">near_me</i>
+                    <span class="sections-text">Quick Delivery</span> Lorem ipsum dolor sit amet, consectetur adipisicing alit, sad do eiusmod tempor incididunt at labore eturet dolore magna aliqua.
+                </div>
+                <div class="sections">
+                    <i class="material-icons sections-icons">phone</i>
+                    <span class="sections-text">Best Support</span> Lorem ipsum dolor sit amet, consectetur adipisicing alit, sad do eiusmod tempor incididunt at labore eturet dolore magna aliqua.
+                </div>
+            </div>
+            <span class="caption">Recent Projects</span>
+            <span class="project-text">
+Lorem ipsum dolor sit amet, consectetur adipisicing alit, sad dv eiusmod tempor incididunt ut 
 </span>
-<div id="recentProjects">
-<div class="portfolio">
-<img class="imgCenter" alt="portfolio one" src="img/portfolio_one.jpg" width="250" height="165">
-<span class="portfolioNumber">Portfolio One</span><br>
-<span class="portfolioDescription">Lorem ipsum dolor sit a met.</span>
-</div>
-<div class="portfolio">
-<img  class="imgCenter" alt="portfolio two" src="img/portfolio_two.jpg" width="250" height="165">
-<span class="portfolioNumber">Portfolio Two</span><br>
-<span class="portfolioDescription">Lorem ipsum dolor sit a met.</span>
-</div>
-<div class="portfolio">
-<img  class="imgCenter" alt="portfolio three" src="img/portfolio_three.jpg" width="250" height="165">
-<span class="portfolioNumber">Portfolio Three</span><br>
-<span class="portfolioDescription">Lorem ipsum dolor sit a met.</span>
-</div>
-<div class="portfolio">
-<img class="imgCenter" alt="portfolio four" src="img/portfolio_four.jpg" width="250" height="165">
-<span class="portfolioNumber">Portfolio Four</span><br>
-<span class="portfolioDescription">Lorem ipsum dolor sit a met.</span>
-</div>
-</div>
-</div>
-<div id=talkToUs>
-<span class="talk">Talk</span>
-<span class="toUs">To Us</span><br>	
-<span id="talkToUsSpanDescription">Et harum quidem rerum facilis est at expedita distinctio. Nam libero tempore, cum soluta nobis est eligendi optio <br> 
-nihil impedit quo facilis est at expedita distinctio minus id quod maxima placeat facere possimus, omnis voluptas assumenda est. 
+            <div class="recent-projects">
+                <div class="portfolio">
+                    <img class="sections-caption" alt="portfolio one" src="img/portfolio-one.jpg">
+                    <span class="portfolio-name">Portfolio One</span>
+                    <br>
+                    <span class="portfolio-text">Lorem ipsum dolor sit a met.</span>
+                </div>
+                <div class="portfolio">
+                    <img class="sections-caption" alt="portfolio two" src="img/portfolio-two.jpg">
+                    <span class="portfolio-name">Portfolio Two</span>
+                    <br>
+                    <span class="portfolio-text">Lorem ipsum dolor sit a met.</span>
+                </div>
+                <div class="portfolio">
+                    <img class="sections-caption" alt="portfolio three" src="img/portfolio-three.jpg">
+                    <span class="portfolio-name">Portfolio Three</span>
+                    <br>
+                    <span class="portfolio-text">Lorem ipsum dolor sit a met.</span>
+                </div>
+                <div class="portfolio">
+                    <img class="sections-caption" alt="portfolio four" src="img/portfolio-four.jpg">
+                    <span class="portfolio-name">Portfolio Four</span>
+                    <br>
+                    <span class="portfolio-text">Lorem ipsum dolor sit a met.</span>
+                </div>
+            </div>
+        </div>
+        <div class=talk-to-us>
+            <span class="talk">Talk</span>
+            <span class="to-us">To Us</span>
+            <br>
+            <span class="talk-text">Et harum quidem rerum facilis est at expedita distinctio. Nam libero tempore, cum soluta nobis est eligendi optio nihil impedit quo facilis est at expedita distinctio minus id quod maxima placeat facere possimus, omnis voluptas assumenda est. 
 </span>
-</div>
-<div id="contactUs">
-<span  class="CaptionText" id="contactUsText">Contact Us</span><br>
-<span id="contactUsTextDescription">Lorem ipsum dolor sit amet, consectetur adipisicing alit, sad do eiusmod tempor ut labore eturet dolore magna aliqua. Ut enim ad minim veniam, quis nostrud 
+        </div>
+        <div class="contact-us">
+            <span class="caption contact-us-caption">Contact Us</span>
+            <br>
+            <span class="contact-us-text">Lorem ipsum dolor sit amet, consectetur adipisicing alit, sad do eiusmod tempor ut labore eturet dolore magna aliqua. Ut enim ad minim veniam, quis nostrud 
 <br>
 connotation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cilium. Lorem ipsum dolor 
 <br>
 sit amet, consectetur adipisicing alit, sad do eiusmod tempor at labore eturet dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco <br>
 laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cilium.
-</span>	
-<div id="contactDetails">
-<img id="mapImg" alt="map" src="img/map.jpg">
-
-
-<div id="contactDetailsDescription">
-<div id="contactDetailsCaption">
-Contact Details	
-</div>
-<div class="contactDetailsBody">
-<img class="imgContactDetails" alt="tel contact details" src="img/tel_footer.png" width="16" height="17">
-<div class="ContactDetails">
-(+91) 0975 720 3582
-</div> 
-</div>
-<div class="contactDetailsBody">
-<img class="imgContactDetails" alt="envelope" src="img/envelope.png" width="20" height="17">
-<div class="ContactDetails">
-Email@domain.com
-</div>
-</div>
-<div class="contactDetailsBody">
-<img class="imgContactDetails" alt="envelope" src="img/map_location.png" width="12" height="18">
-<div class="ContactDetails">
-<pre> No.235, New St, 25° Sector, 
- London, England</pre> 
-</div>
-<form id="formContactUs">
-<textarea class="inputInfo" name="name" id="nameForm" cols="32" rows="1">Name	</textarea><br>
-<textarea name="email" class="inputInfo" id="emailForm" cols="32" rows="1">Email</textarea><br>
-<textarea name="message"  class="inputInfo" id="messageForm" cols="54" rows="7">Message</textarea><br>	
-<input type="submit" value="Submit" id=submitContactUs>
-</form>
-</div>
-</div>	
-</div>
-</div>
-<div id="copyright">
-Copyright&#169;2015 Default Value	
-</div>
-</div>
-	
+</span>
+            <div class="contact-details">
+                <img class="contact-map" alt="map" src="img/map.jpg">
+                <div class="contact-description">
+                    <span class="contact-caption">
+                        Contact Details
+                    </span>
+                    <div class="contact-body">
+                            <div class="contact-body">
+                            <i class="material-icons contact-icon">call</i>
+                            <div class="contact-details-text"> (+91) 0975 720 3582
+                            </div>
+                        </div>
+                        <div class="contact-body">
+                            <i class="material-icons contact-icon">mail_outline</i>
+                            <div class="contact-details-text"> Email@domain.com
+                            </div>
+                        </div>
+                        <div class="contact-body">
+                            <i class="material-icons contact-icon">location_on</i>
+                            <div class="contact-details-text">No.235, New St, 25° Sector, London, England
+                            </div>
+                        </div>                        
+                        <form class="contact-form" action="index.html">
+                            <input type="text" class="contact-input" name="name" placeholder="Name" size="32">
+                            <br>
+                            <input type="text" name="email" class="contact-input" placeholder="Email" size="32">
+                            <br>
+                            <input type="text" name="message" class="contact-input message" size="500" placeholder="Message">
+                            <br>                            
+                            <button class="contact-submit">Submit</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <div class="copyright">
+                Copyright&#169;2015 Default Value
+            </div>
+    </main>
 </body>
 </html>

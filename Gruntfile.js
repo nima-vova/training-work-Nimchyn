@@ -7,11 +7,23 @@ imagemin:{
   expand:true,
   cwd: 'img/',   // This had to be img/
   src: ['**/*.{png,jpg}'],
-  dest: 'img/'
+  /*dest: 'img/'*/
+  dest: 'img-min/'
   }]
 }
 },
-
+sass_import: {
+    options: {},
+    dist: {
+      files: {
+        'mobile.scss': ['scss/reset.scss', 'scss/mobile/main-seting.scss',
+        'scss/mobile/header.scss', 'scss/mobile/slider.scss',
+        'scss/mobile/main-content.scss', 'scss/mobile/talk-to-us.scss',
+        'scss/mobile/contact-us.scss', 'scss/mobile/contact-details.scss',
+        'scss/mobile/copyright.scss']
+      }
+    }
+  },
 sass: {
   dev: {
     options: {
@@ -19,7 +31,8 @@ sass: {
       compass: true
     },
     files: {
-      'screen.css': 'screen.scss'
+      'screen.css': 'screen.scss',
+      'mobile.css': 'mobile.scss'
     }
   },
   prod: {
@@ -28,7 +41,8 @@ sass: {
       compass: true
     },
     files: {
-     'screen.css': 'screen.scss'
+     'screen.css': 'screen.scss',     
+      'mobile.css': 'mobile.scss'
     }
   }
 },
@@ -41,10 +55,15 @@ watch: {
     options: {
         livereload: true,
     },
-    sass: {
-        files: ['*.{scss,sass}'],
-        tasks: ['sass']
+
+   // sass: {
+     //   files: ['*.{scss,sass}'],
+     //   tasks: ['sass']
    
+  //  },
+    stylesheets: {
+      files: ['scss/**/*.scss'],
+      tasks: ['sass_import', 'sass']
     },
 
     imagemin: {
@@ -52,8 +71,8 @@ watch: {
         tasks: ['imagemin']   
    },
  
-//css: {
-//      files: ['*.css'],
+//scss: {
+//     files: ['css/**/*.scss'],
 //    },
    js: {
         files: ['js/**/*.js'],
@@ -84,6 +103,7 @@ watch: {
  grunt.loadNpmTasks('grunt-contrib-sass');
  grunt.loadNpmTasks('grunt-contrib-watch');
  grunt.loadNpmTasks('grunt-contrib-connect');
+ grunt.loadNpmTasks('grunt-sass-import');
  //grunt.loadNpmTasks('grunt-livereload'); 
 // grunt.registerTask('default', ['imagemin'], ['watch']);
 grunt.registerTask('server', ['connect','watch']);

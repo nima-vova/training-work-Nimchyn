@@ -1,0 +1,25 @@
+.talk-to-us {
+    padding-top: 74px;
+    padding-bottom: 10px;
+    background-color: $talk-color;
+    text-align: center;
+    color: $basic-color;
+    height: 100%;
+    .talk {
+        display: inline-block;
+        /*margin-bottom: 23px;*/
+        font-size: 60px;
+    }
+    .to-us {
+        color: $corporate-color;
+        font-size: 60px;
+    }
+    .talk-text {
+        display: block;
+        font-size: 22px;
+        margin-top: 8%;
+        margin-bottom: 21%;
+        font-weight: 500;
+        padding: 0 4%;
+    }
+}

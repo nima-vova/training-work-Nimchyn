@@ -1,0 +1,47 @@
+.slider {
+    height: 404px;
+    background: url(img/Layer1.jpg) 0 0 no-repeat;
+    .content {
+        @include align-center;
+        height: 335px;
+        background: url(img/slider-img-tmp.jpg)0 0 no-repeat;
+        letter-spacing: 65px;
+        .navigation {
+            @include inline-blocks;
+            margin-top: 100px;
+            text-align: center;
+        }
+        .central-content {
+            padding-top: 55px;
+        }
+        .content-text {
+            display: block;
+        }
+
+        .next-content {
+            max-width: 70%;
+            height: auto;
+        }
+        .welcome-uibrush {
+            /*max-width:30%;*/
+            max-width: 250px;
+            height: auto;
+            padding-bottom: 10px;
+        }
+    }
+    .footer {
+        height: 104px;
+        background-color: $corporate-color;
+        color: $basic-color;
+        text-align: center;
+        font-size: 14px;
+        font-weight: 700;
+        padding-top: 25px;
+        .text-footer {
+            font-size: 14px;
+            color: $basic-color;
+            font-weight: 600;
+            border-bottom: 1px solid white;
+        }
+    }
+}

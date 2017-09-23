@@ -1,0 +1,67 @@
+.main-content {
+    background-color: rgb(255, 255, 255);
+    text-align: center;
+    padding-top: 42px;
+    .caption-text {
+        @extend .block-description;
+        display: block;
+        margin: 17px auto;
+        padding: 0 30px 38px 30px;
+        border-bottom: 8px solid $corporate-color;
+        margin-bottom: 50px;
+    }
+    .content-body {
+        padding-bottom: 4%;
+        margin-bottom: 15%;
+        border-bottom: 8px solid $corporate-color;
+        .sections {                        
+            margin: 5.6% 20%;
+            font-size: 16px;
+            font-weight: 100;
+            text-align: center;
+            color: $main-color-font;
+            i.sections-icons{
+                    font-size: 35px;
+                    display: block;                   
+            } 
+            .sections-text {
+                display: block;
+                text-align: center;
+                font-size: 24px;
+                font-weight: 500;
+                margin: 12px auto 12px auto;
+                color: black;
+            }
+        }
+    }
+    .project-text {
+        @extend .block-description;
+        display: block;
+       /* width: 80%;*/
+        margin: 6% 10% 16% 10%;
+    }
+    .recent-projects {
+        .portfolio {
+            background: url(img/portfolio_numbers_fond.png) 0 0 no-repeat;
+            margin: 2% 23%;
+            margin-bottom: 56px;
+            /*width: 53%;*/
+            .portfolio-name {
+                font-size: 20px;
+                font-weight: 500;
+                line-height: 1.8;
+                color: rgb(254, 92, 50);
+            }
+            .portfolio-text {
+                font-size: 16px;
+                font-weight: 500;
+                word-spacing: 1.2px;
+                color: rgb(95, 95, 95);
+                line-height: 2;
+            }
+        }
+        .portfolio:nth-child(4) {
+            margin-bottom: 114px;
+        }
+    }
+}
