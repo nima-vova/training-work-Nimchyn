@@ -1,0 +1,87 @@
+.contact-details {
+    @include align-center;
+    letter-spacing: 15px;
+    margin-top: 3.9%;
+
+    .contact-map {
+        @include inline-blocks;
+    }
+
+    .contact-description {
+        @include inline-blocks;
+        font-size: 12px;
+        font-weight: 100;
+        text-align: left;
+
+        .contact-caption {
+            display: inline-block;
+            padding-left: 1%;
+            margin-bottom: 2.5%;
+            text-align: left;
+            font-size: 20px;
+            font-weight: 500;
+            line-height: 1;
+        }
+
+        .contact-body {
+            padding-left: 8%;
+            margin-bottom: 3.1%;
+            text-align: left;
+            font-size: 15px;
+            font-weight: 400;
+            color: grey;
+        }
+
+        .contact-body:nth-child(4) {
+            margin-bottom: 2.7%;
+        }
+
+        i.contact-icon {
+            display: inline-block;
+            font-size: 20px;
+            font-weight: 300;
+            float: left;
+        }
+
+        .contact-details-text {
+            display: inline-block;
+            margin-left: 5%;
+            line-height: 1.5;
+        }
+
+        .contact-form {
+            margin-left: 52px;
+            margin-right: 6px;
+
+            .contact-input {
+                display: block;
+                font-size: 15px;
+                font-weight: 400;
+                background-color: $input-color-font;
+                border: 1px solid $talk-color;
+                border-radius: 3px;
+                margin-bottom: 1.5%;
+                width: 300px;
+                height: 50px;
+            }
+
+            .message {
+                width: 527px;
+                height: 166px;
+                margin-bottom: 0;
+            }
+
+            .contact-submit {
+                display: block;
+                margin-top: 3%;
+                padding: 2% 7%;
+                background-color: $corporate-color;
+                border: 0;
+                color: $basic-color;
+                border-radius: 3px;
+                font-size: 18px;
+                font-weight: 200;
+            }
+        }
+    }
+}

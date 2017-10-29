@@ -1,0 +1,104 @@
+.contact-details {
+    margin-top: 3.9%;
+
+    .contact-map {
+        display: inline-block;
+        clear: both;
+        margin: auto 12%;
+    }
+
+    .contact-description {
+        font-size: 12px;
+        font-weight: 100;
+        text-align: center;
+
+        .contact-caption {
+            display: block;
+            margin-top: 10.3%;
+            text-align: center;
+            font-size: 28px;
+            font-weight: 550;
+        }
+
+        .contact-body {
+            text-align: left;
+            font-size: 15px;
+            font-weight: 400;
+            color: $main-color-font;
+        }
+
+        .contact-body:nth-child(4) {
+            display: inline-block;
+            position: relative;
+            width: 30%;
+            margin: auto 30%;
+            top: 10px;
+        }
+
+        .contact-body:nth-child(2),
+        .contact-body:nth-child(3) {
+            display: inline-block;
+            position: relative;
+            top: 110px;
+            width: 25%;
+        }
+
+        .contact-body:nth-child(2) {
+            margin-right: 15%;
+        }
+
+        i.contact-icon {
+            display: inline;
+            font-size: 20px;
+            font-weight: 300;
+        }
+
+        .contact-details-text {
+            display: inline;
+            margin-left: 8%;
+            line-height: 0em;
+        }
+
+        .contact-london {
+            margin-left: 19%;
+            margin-top: 1.5em;
+            margin-bottom: 0em;
+        }
+
+        .contact-form {
+            margin-top: 9%;
+            margin-left: 15%;
+            margin-right: 15%;
+
+            .contact-input {
+                display: block;
+                font-size: 15px;
+                font-weight: 400;
+                background-color: $input-color-font;
+                border: 1px solid $talk-color;
+                border-radius: 3px;
+                margin-bottom: 1.5%;
+                width: 100%;
+                height: 50px;
+            }
+
+            .message {
+                width: 100%;
+                height: 166px;
+                margin-bottom: 0;
+            }
+
+            .contact-submit {
+                display: block;
+                margin: 5.5% 12% auto 12%;
+                padding: 2% 32%;
+                background-color: $corporate-color;
+                border: 0;
+                color: $basic-color;
+                border-radius: 3px;
+                font-size: 18px;
+                font-weight: 200;
+            }
+        }
+    }
+}

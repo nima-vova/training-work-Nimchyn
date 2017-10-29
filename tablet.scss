@@ -1,8 +1,12 @@
-/*@import 'reset';
-*/
+@import 'scss/reset';
+
 a {
     text-decoration: none;
     color: black;
+}
+
+label {
+    display: none;
 }
 
 $corporate-color: rgb(243, 107, 73);
@@ -10,6 +14,7 @@ $main-color-font: rgb(156, 156, 156);
 $input-color-font: rgb(240, 240, 240);
 $basic-color: rgb(255, 255, 255);
 $talk-color: rgb(122, 122, 122);
+
 @mixin align-center {
     text-align: center;
     white-space: nowrap;
@@ -18,15 +23,14 @@ $talk-color: rgb(122, 122, 122);
 
 @mixin inline-blocks {
     display: inline-block;
-
     vertical-align: middle;
     white-space: normal;
     letter-spacing: normal;
 }
 
 .caption {
-    font-size: 26px;
-    font-weight: 500;
+    font-size: 30px;
+    font-weight: 600;
     border-bottom: 2px solid $corporate-color;
 }
 
@@ -36,42 +40,21 @@ $talk-color: rgb(122, 122, 122);
     /*font-size: 14px; */
 }
 
-main {
-    width: 480px;
+.main {
+    width: 770px;
     margin: 0 auto;
-    font-family: Ubuntu, 'Times New Roman', Times, Roman, serif;
+    font-family: Ubuntu, "Times New Roman", Times, serif;
 }
 
-i.material-icons {
-    color: $corporate-color;
-    font-size: 55px;
-}
-
+i.material-icons,
 i.fa {
     color: $corporate-color;
 }
 
-/*begin head*/
-
-.main-menu {
-    margin-left: 17px;
-}
-
-/*end head*/
-
-
-/*begin slider */
-
-
-
-/*end slider*/
-
-
-/*begin mainContent */
-
-
-
-/*begin footer*/
-
-
-/*end footer*/
+@import 'scss/tablet/header';
+@import 'scss/tablet/slider';
+@import 'scss/tablet/main-content';
+@import 'scss/tablet/talk-to-us';
+@import 'scss/tablet/contact-us';
+@import 'scss/tablet/contact-details';
+@import 'scss/tablet/copyright';

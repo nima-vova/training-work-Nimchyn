@@ -3,32 +3,22 @@
         @include align-center;
         background: url(img/slider-img-tmp.jpg)0 0 no-repeat;
         background-size: cover;
-        letter-spacing: 65px;
-        padding-bottom: 20%;
+        letter-spacing: 103px;
+        padding-bottom: 21.8%;
 
         .navigation {
             @include inline-blocks;
-            margin-top: 23%;
+            margin-top: 21%;
             text-align: center;
         }
 
         .central-content {
-            padding-top: 8%;
+            padding-top: 3%;
         }
 
         .content-text {
             display: block;
-        }
-
-        .next-content {
-            max-width: 70%;
-            height: auto;
-        }
-
-        .welcome-uibrush {
-            max-width: 250px;
-            height: auto;
-            padding-bottom: 5%;
+            margin: 2.1% auto;
         }
     }
 
@@ -36,15 +26,15 @@
         background-color: $corporate-color;
         color: $basic-color;
         text-align: center;
-        font-size: 14px;
-        font-weight: 700;
-        padding: 5.5%;
+        font-size: 18px;
+        font-weight: 500;
+        padding: 4.65%;
+        word-spacing: 2px;
 
         .text-footer {
-            font-size: 14px;
-            color: $basic-color;
-            font-weight: 600;
+            font-size: 24px;
             border-bottom: 1px solid white;
+            color: $basic-color;
         }
     }
 }

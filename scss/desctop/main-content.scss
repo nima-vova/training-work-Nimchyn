@@ -1,0 +1,94 @@
+.main-content {
+    background-color: $basic-color;
+    text-align: center;
+    padding-top: 3.9%;
+
+    .caption-text {
+        @extend .block-description;
+        display: block;
+        margin: 2.5% auto;
+        padding: 0 10% 0 10%;
+    }
+
+    .content-body {
+        @include align-center;
+    }
+
+    .sections {
+        @include inline-blocks;
+        width: 17%;
+        margin: 1.5% 5% 3.7% auto;
+        font-size: 12px;
+        font-weight: 100;
+        text-align: left;
+        line-height: 1.5;
+        color: $main-color-font;
+
+        i.sections-icons {
+            font-size: 35px;
+            display: block;
+            text-align: center;
+        }
+
+        .sections-text {
+            display: block;
+            text-align: center;
+            font-size: 20px;
+            margin: 4% auto;
+            color: black;
+        }
+    }
+
+    .sections:nth-child(4) {
+        margin-right: auto;
+    }
+
+    .project-text,
+    {
+        @extend .block-description;
+        display: block;
+        margin-top: 27px;
+    }
+
+    .screen-project-text {
+        @extend .block-description;
+    }
+
+    .recent-projects {
+        @include align-center;
+        margin-top: 22px;
+        padding-bottom: 103px;
+    }
+
+    .portfolio {
+        @include inline-blocks;
+        padding: 0.2% 0.3% 0.1% 0.3%;
+        background: url(img/portfolio-numbers-fond.png) 0 0 no-repeat;
+        background-size: 100% 99.7%;
+        margin-right: 2.9%;
+        letter-spacing: 0em;
+        text-align: right;
+        line-height: 1.6;
+
+        .portfolio-name {
+            font-size: 15px;
+            font-weight: 500;
+            padding-right: 8%;
+            word-spacing: 10px;
+            line-height: 2;
+            color: $corporate-color;
+        }
+
+        .portfolio-text {
+            font-size: 11px;
+            font-weight: 500;
+            padding-right: 8%;
+            word-spacing: 1.5px;
+            line-height: 2.5;
+            color: $main-color-font;
+        }
+    }
+    .portfolio:nth-child(4) {
+        margin-right: auto;
+    }
+}

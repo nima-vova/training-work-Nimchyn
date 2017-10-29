@@ -1,21 +1,25 @@
-			header {
+header {
     overflow: hidden;
     background-color: $basic-color;
-    height: 235px;
 }
+
 .header-logo {
-    display: block;
     font-size: 65px;
     font-weight: 100;
-    width: 60%;
-    text-align: right;
-    padding: 70px 0 20px 60px;
+    text-align: center;
+    padding: 15.7% 0 17.2% 0;
 }
+
 .header-logo .ui {
     color: $corporate-color;
 }
+
 nav {
+    line-height: 0.5;
     padding-top: 10px;
     float: right;
-    width: 20%;    
+
+    .menu-screen {
+        visibility: hidden;
+    }
 }

@@ -1,5 +1,70 @@
 @import 'scss/reset';
-@import 'scss/mobile/main-seting';
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+label {
+    display: none;
+}
+
+.screen-project-text {
+    display: none;
+}
+
+$corporate-color: rgb(243, 107, 73);
+$main-color-font: rgb(156, 156, 156);
+$input-color-font: rgb(240, 240, 240);
+$basic-color: rgb(255, 255, 255);
+$talk-color: rgb(122, 122, 122);
+
+@mixin align-center {
+    text-align: center;
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+@mixin inline-blocks {
+    display: inline-block;
+    vertical-align: middle;
+    white-space: normal;
+    letter-spacing: normal;
+}
+
+.caption {
+    font-size: 26px;
+    font-weight: 500;
+    border-bottom: 2px solid $corporate-color;
+}
+
+.block-description {
+    color: $main-color-font;
+}
+
+.main {
+    width: 35.6%;
+    margin: 0 auto;
+    font-family: Ubuntu, 'Times New Roman', serif;
+}
+
+i.material-icons {
+    color: $corporate-color;
+    font-size: 55px;
+}
+
+i.fa {
+    color: $corporate-color;
+}
+
+
+/*begin head*/
+
+.main-menu {
+    display: inline;
+    padding-left: 84%;
+}
+
 @import 'scss/mobile/header';
 @import 'scss/mobile/slider';
 @import 'scss/mobile/main-content';

@@ -1,0 +1,61 @@
+header {
+    background-color: white;
+    overflow: hidden;
+
+    .header-logo {
+        float: left;
+        font-size: 22px;
+        font-weight: 500;
+        margin: 2.4% auto 2.4% 8.2%;
+    }
+
+    .ui {
+        color: $corporate-color;
+    }
+
+    nav {
+        margin: 2.7% 7.7% auto 5%;
+        text-align: right;
+        font-size: 15px;
+        font-weight: 500;
+        float: right;
+
+        .main-menu {
+            i.material-icons {
+                font-size: 0;
+            }
+        }
+
+        .menu-mobile {
+            visibility: hidden;
+        }
+
+        .menu-screen {
+            display: inline-block;
+            margin-right: 35px;
+        }
+
+        .menu-text {
+            display: block;
+        }
+
+        .active-menu {
+            display: block;
+            margin-left: 40%;
+            width: 0;
+            height: 0;
+        }
+
+        .main-menu .selected {
+            .menu-text {
+                border-bottom: 2px solid $corporate-color;
+            }
+
+            .active-menu {
+                border-left: 3px solid transparent;
+                border-right: 3px solid transparent;
+                border-top: 7px solid $corporate-color;
+            }
+        }
+    }
+}
