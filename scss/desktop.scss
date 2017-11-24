@@ -1,0 +1,33 @@
+@import 'reset';
+@import 'main-settings';
+
+.caption {
+    font-size: 26px;
+    font-weight: 500;
+    border-bottom: 2px solid $corporate-color;
+}
+
+.block-description {
+    line-height: 1.5;
+    color: $main-color-font;
+    /*font-size: 14px; */
+}
+
+.main {
+    width: 1344px;
+    margin: 0 auto;
+    font-family: $font-family;
+}
+
+i.material-icons,
+i.fa {
+    color: $corporate-color;
+}
+
+@import 'desktop/header';
+@import 'desktop/slider';
+@import 'desktop/main-content';
+@import 'desktop/talk-to-us';
+@import 'desktop/contact-us';
+@import 'desktop/contact-details';
+@import 'desktop/copyright';

@@ -1,0 +1,30 @@
+$corporate-color: rgb(243, 107, 73);
+$main-color-font: rgb(156, 156, 156);
+$input-color-font: rgb(240, 240, 240);
+$basic-color: rgb(255, 255, 255);
+$talk-color: rgb(122, 122, 122);
+$font-family: Ubuntu, "Times New Roman", Times, serif;
+$name-section-color: black;
+$portfolio-text-color: rgb(95, 95, 95);
+
+a {
+    text-decoration: none;
+    color: $name-section-color;
+}
+
+label {
+    display: none;
+}
+
+@mixin align-center {
+    text-align: center;
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+@mixin inline-blocks {
+    display: inline-block;
+    vertical-align: middle;
+    white-space: normal;
+    letter-spacing: normal;
+}

@@ -16,31 +16,38 @@ module.exports = function(grunt) {
                     style: 'compressed'
                 },
                 files: {
-                    'screen.css': 'screen.scss',
-                    'mobile.css': 'mobile.scss',
-                    'tablet.css': 'tablet.scss'
+                    'css/desktop.css': '**/scss/**/desktop.scss',
+                    'css/mobile.css': '**/scss/**/mobile.scss',
+                    'css/tablet.css': '**/scss/**/tablet.scss'
                 }
             }
         },
-
         watch: {
-            options: {
+             /*options: {                
                 livereload: true
-            },
+            }, */           
             html: {
-                files: ['index.html'],
-            },
-            sass: {
-                options: {
-                    livereload: false
+                options: {                    
+                    livereload: true,
                 },
-                files: ['*.scss', 'scss/reset.scss', 'scss/*/*.scss'],
+                files: ['index.html'],
+            },            
+            sass: {
+               /* options: {                    
+                    livereload: false,
+
+            },*/                            
+                //files: ['scss/*.scss', 'scss/*/*.scss'],
+                files: ['**/scss/**/*.scss'],
                 tasks: ['sass'],
             },
-            css: {
-                files: ['*.css'],
-                tasks: [],
-            },
+           css: {
+                options: {                    
+                    livereload: true,
+               }, 
+               /*all files (and css.map), so as not to save the file twice to work */             
+               files: ['**/css/**/*.{css,css.map}']
+        }                       
         }
     });
 

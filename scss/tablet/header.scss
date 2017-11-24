@@ -1,5 +1,5 @@
 header {
-    background-color: white;
+    background-color: $basic-color;
     overflow: hidden;
 
     .header-logo {
@@ -39,23 +39,25 @@ header {
             display: block;
         }
 
-        .active-menu {
+        .menu-text {
+            position: relative;
             display: block;
-            margin-left: 40%;
-            width: 0px;
-            height: 0px;
+
         }
 
-        .main-menu .selected {
-            .menu-text {
-                border-bottom: 2px solid $corporate-color;
-            }
+        .menu-text:hover{
+            border-bottom: 2px solid $corporate-color; 
+        }
 
-            .active-menu {
-                border-left: 3px solid transparent;
-                border-right: 3px solid transparent;
-                border-top: 7px solid $corporate-color;
-            }
+        .menu-text:hover:after {           
+             clear: both;
+             content: '';
+             position: absolute;             
+             top:  105%;
+             left: 42%;
+             border-left: 5px solid transparent;
+             border-right: 5px solid transparent;
+             border-top: 7px solid $corporate-color;       
         }
     }
 }

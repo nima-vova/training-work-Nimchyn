@@ -1,0 +1,47 @@
+@import 'reset';
+@import 'main-settings';
+
+.screen-project-text {
+    display: none;
+}
+
+.caption {
+    font-size: 26px;
+    font-weight: 500;
+    border-bottom: 2px solid $corporate-color;
+}
+
+.block-description {
+    color: $main-color-font;
+}
+
+.main {
+    /*width: 35.6%;*/
+    width: 100%;
+    margin: 0 auto;
+    font-family: $font-family;
+}
+
+i.material-icons {
+    color: $corporate-color;
+    font-size: 55px;
+}
+
+i.fa {
+    color: $corporate-color;
+}
+
+/*begin head*/
+
+.main-menu {
+    display: inline;
+    padding-left: 84%;
+}
+
+@import 'mobile/header';
+@import 'mobile/slider';
+@import 'mobile/main-content';
+@import 'mobile/talk-to-us';
+@import 'mobile/contact-us';
+@import 'mobile/contact-details';
+@import 'mobile/copyright';
