@@ -9,12 +9,22 @@
 
         .navigation {
             @include inline-blocks;
-            margin-top: 23%;
+            margin-top: 27%;
             text-align: center;
         }
 
         .central-content {
-            padding-top: 8%;
+            padding-top: 1%;
+            overflow: hidden;
+            @include align-center;
+            width: 250px;
+            height: 70px;
+            
+            .slides-step {
+                @include inline-blocks;                 
+                overflow: hidden;
+                text-align: center;
+            }
         }
 
         .content-text {

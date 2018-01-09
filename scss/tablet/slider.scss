@@ -3,7 +3,7 @@
         @include align-center;
         background: url(/img/slider-img-tmp.jpg)0 0 no-repeat;
         background-size: cover;
-        letter-spacing: 103px;
+        letter-spacing: 50px;
         padding-bottom: 21.8%;
 
         .navigation {
@@ -14,6 +14,16 @@
 
         .central-content {
             padding-top: 3%;
+            overflow: hidden;
+            width: 470px;
+            height: 150px;
+            letter-spacing: 50px;
+
+            .slides-step {
+                @include inline-blocks;                 
+                overflow: hidden;
+                text-align: center;
+            } 
         }
 
         .content-text {

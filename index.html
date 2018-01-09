@@ -5,11 +5,33 @@
     <meta charset="UTF-8">
     <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Ubuntu:regular,bold&subset=Latin">
     <link rel="stylesheet" href="//fonts.googleapis.com/icon?family=Material+Icons">
-    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">    
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" media="screen and (max-width: 770px)" type="text/css" href="/css/mobile.css">
     <link rel="stylesheet" media="screen and (min-width: 770px) and (max-width: 992px)" type="text/css" href="/css/tablet.css">
     <link media="screen and (min-width: 992px)" rel="stylesheet" type="text/css" href="/css/desktop.css">
+    <script src="http://code.jquery.com/jquery-latest.min.js"></script>
+    <script src="/js/plagin-navigation.js"></script>
     <title>Document</title>
+    <script>
+    $(document).ready(function() {
+        // add a property (created by the plugin) element, pass the parameters: 
+        // pointer(left,right), element(animation block), array of slide images
+        // (if you do not pass the array, then defaults will be used), speed (if you do not pass 
+        // the speed, then defaults will be used),
+        // transform (the type of transformation during the animation, so far only the rotate, if // not specify,  then the animation will be without transformation)        
+        $(".next-left").startNavigation('left', 'slides-step', '', 'rotate', 5000);
+        $(".next-right").startNavigation('right', 'slides-step', '', 'rotate', 5000);
+
+        var examleSlides = [
+            ['slide-example-1.png', 'slide-example-1.png'],
+            ['slide-example-2.png', 'slide-example-2.png'],
+            ['slide-example-3.png', 'slide-example-3.png'],
+            ['slide-example-4.png', 'slide-example-4.png']
+        ]
+        $(".next-left-footer").startNavigation('left', 'slides-footer', examleSlides);
+        $(".next-right-footer").startNavigation('right', 'slides-footer', examleSlides);
+    });
+    </script>
 </head>
 
 <body>
@@ -34,17 +56,19 @@
         </header>
         <div class="slider">
             <div class="content">
-                <a class="navigation" href="" onclick="return false">
+                <a class="navigation next-left" href="" onclick="return false">
 <img alt="next left" class="next-content" src="img/br-next-left.png"></a>
                 <div class="navigation central-content">
-                    <a class="content-text" href="" onclick="return false">
+                    <div class="slides-step" id="0-step">
+                        <a class="content-text" href="" onclick="return false">
 <img class="welcome-uibrush" alt="welcome" src="img/slider-text-welcome.png">
 </a>
-                    <a class="content-text" href="" onclick="return false">
+                        <a class="content-text" href="" onclick="return false">
 <img  class="welcome-uibrush" alt="we provide" src="img/slider-text-we-provide.png">
 </a>
+                    </div>
                 </div>
-                <a class="navigation" href="" onclick="return false">
+                <a class="navigation next-right" href="" onclick="return false">
 <img alt="next right"  class="next-content" src="img/br-next-right.png">
 </a>
             </div>
@@ -151,6 +175,23 @@ laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in repreh
                     <button class="contact-submit">Submit</button>
                 </form>
             </div>
+        </div>
+        <div class="content-slider-example">
+            <a class="navigation-examle next-left-footer" href="" onclick="return false">
+<img alt="next left" class="next-content" src="img/br-next-left.png"></a>
+            <div class="navigation-examle central-content-examle">
+                <div class="slides-footer" id="0-step-footer">
+                    <a class="content-text" href="" onclick="return false">
+<img class="welcome-uibrush" alt="welcome" src="img/slide-example-1.png">
+</a>
+                    <a class="content-text" href="" onclick="return false">
+<img  class="welcome-uibrush" alt="we provide" src="img/slide-example-1.png">
+</a>
+                </div>
+            </div>
+            <a class="navigation-examle next-right-footer" href="" onclick="return false">
+<img alt="next right"  class="next-content" src="img/br-next-right.png">
+</a>
         </div>
         <div class="copyright">
             Copyright&#169;2015 Default Value

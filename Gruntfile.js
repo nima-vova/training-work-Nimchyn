@@ -10,6 +10,27 @@ module.exports = function(grunt) {
                 },
             }
         },
+        jshint: {
+           files: ['js/**/*.js']
+        },
+        uglify: {
+            my_target: {
+                files: {
+                'dest/output.min.js': ['js/**/*.js']
+                }
+            }
+        },
+        imagemin:{
+            dynamic:{
+                files: [{
+                    expand:true,
+                    cwd: 'img/',   // This had to be img/
+                src: ['**/*.{png,jpg}'],
+                /*dest: 'img/'*/
+                dest: 'img-min/'
+                }]
+            }
+        },
         sass: {
             dist: {
                 options: {
@@ -25,12 +46,23 @@ module.exports = function(grunt) {
         watch: {
              /*options: {                
                 livereload: true
-            }, */           
+            }, */
+                        
             html: {
                 options: {                    
                     livereload: true,
                 },
                 files: ['index.html'],
+            },
+            js: {
+                options: {                    
+                    livereload: true,
+                },
+                files: ['js/**/*.js'],
+            },            
+            jshint_uglify:  {                  
+                  files: ['**/js/**/*.js'],
+                  tasks: ['jshint','uglify']
             },            
             sass: {
                /* options: {                    
@@ -44,10 +76,14 @@ module.exports = function(grunt) {
            css: {
                 options: {                    
                     livereload: true,
-               }, 
+                },
                /*all files (and css.map), so as not to save the file twice to work */             
                files: ['**/css/**/*.{css,css.map}']
-        }                       
+           },
+           imagemin: {
+               files: ['img/*.{png,jpg}'],
+               tasks: ['imagemin']   
+           },                
         }
     });
 
@@ -55,8 +91,8 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks('grunt-contrib-sass');
     grunt.loadNpmTasks('grunt-contrib-watch');
     grunt.loadNpmTasks('grunt-contrib-connect');
-    //grunt.loadNpmTasks('grunt-contrib-jshint');
-
+    grunt.loadNpmTasks('grunt-contrib-jshint');
+    grunt.loadNpmTasks('grunt-contrib-uglify');
     // Default task(s).
     grunt.registerTask('default', ['connect', 'watch']);
 

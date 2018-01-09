@@ -12,8 +12,20 @@
             text-align: center;
         }
 
-        .central-content {
-            padding-top: 3%;
+        .central-content {            
+            padding-top: 3%; 
+            overflow: hidden;
+            /*border: 1px solid gold;*/
+            width: 470px;
+            height: 150px;
+            @include align-center;
+            letter-spacing: 50px;
+
+            .slides-step {
+                @include inline-blocks;                 
+                overflow: hidden;
+                text-align: center;
+            } 
         }
 
         .content-text {
