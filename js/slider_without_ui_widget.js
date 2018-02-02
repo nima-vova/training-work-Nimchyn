@@ -1,11 +1,16 @@
 /*jshint esversion: 6 */
 (function($) {    
     //create a class constructor and declare its properties public(this.property), private(var)
-    function CreateOptionsForStep(pointer, element, imges, transformEffect, speed = 1500) {
+    function CreateOptionsForStep(parameters) {
+        var pointer = parameters.pointer;
+        var element = parameters.element;
+        var imges = parameters.imges;
+        var transformType = parameters.transformType;
+        var speed = parameters.speed || (parameters.speed = 1500);
         this.element = element;
         this.pointer = pointer;
         this.speed = speed;
-        this.transformEffect = transformEffect;
+        this.transformType = transformType;
         this.cloneElement = $('.' + element).clone();
         this.width = parseInt($('.' + element).css("width"));
         //if you do not pass an array of pictures then we form the default array    
@@ -17,8 +22,9 @@
         ], imges);
         this.numberId = parseInt($('.' + element + ':eq(0)').attr('id'));
         var ArraySymbolsId = $('.' + element + ':eq(0)').attr('id').split(this.numberId);
-        this.symbolId = ArraySymbolsId[1];        
+        this.symbolId = ArraySymbolsId[1];
     }
+
     //create a method in the prototype 
     //where an element (animation block) is created for the animation to the left.
     //When checking the element id and we determine which images from the array we insert 
@@ -26,7 +32,7 @@
     //After installation, the item is not displayed, because it is outside the block 
     //(parent element is csS overflow: hidden). Therefore, we call the anomation function 
     //(animateStepByStep) for the slide movement.
-    CreateOptionsForStep.prototype.insertElementInLeft = function() {
+    CreateOptionsForStep.prototype.insertInLeft = function() {
         if (this.numberId !== this.imagesNavigation.length - 1) {
             this.cloneElement.find('img:eq(0)').attr('src', 'img/' + this.imagesNavigation[this.numberId + 1][0]);
             this.cloneElement.find('img:eq(1)').attr('src', 'img/' + this.imagesNavigation[this.numberId + 1][1]);
@@ -41,14 +47,15 @@
 
         this.animateStepByStep();
     };
-    //method is created in the prototype where an element (animation block) 
+
+    //method is created in the prototype where an element (animation block)
     //is created for animation on the right. 
     //When checking the element identifier, we determine which images from the array 
     //we insert for the new slider element before the existing element. 
     //After install, the item is not displayed(marginLeft', '-' + this.width + 'px') because it is outside the block 
     //(parent item is csS overflow: hidden). 
     //Therefore, we call an anomation function (animateStepByStep) for slide motion.
-    CreateOptionsForStep.prototype.insertElementInRight = function() {
+    CreateOptionsForStep.prototype.insertInRight = function() {
         if (this.numberId !== 0) {
             this.cloneElement.find('img:eq(0)').attr('src', 'img/' + this.imagesNavigation[this.numberId - 1][0]);
             this.cloneElement.find('img:eq(1)').attr('src', 'img/' + this.imagesNavigation[this.numberId - 1][1]);
@@ -64,14 +71,14 @@
         $('.' + this.element + ':eq(0)').before(this.cloneElement);
         this.animateStepByStep();
     };
+
     // method is created in the prototype for animation to the left and right
     // using the jquery function .animate() (changing marginLeft) 
     CreateOptionsForStep.prototype.animateStepByStep = function() {
-        var step = 0;
         var element = this.element;
         var pointer = this.pointer;
         var speed = this.speed;
-        var transformEffect = this.transformEffect;
+        var transformType = this.transformType;
         var marginToTheLeft = '0px';
         var indexEq = 1;
         var widthElement = 0;
@@ -95,21 +102,36 @@
                     now = 0;
                     $('.' + element + ':eq(' + indexEq + ')').remove();
                 }
-                if (transformEffect == 'rotate')
+                if (transformType == 'rotate')
                     $('.' + element).css('-webkit-transform', 'rotate(' + now + 'deg)');
             },
             duration: speed
         });
     };
+
     // create a new property-function for the object jQuery,  
     // that will be an instance for the class CreateOptionsForStep
-    $.fn.startNavigation = function(pointer, element, imges, transformEffect, speed) {
-        this.click(function() {            
-            var startNavigation = new CreateOptionsForStep(pointer, element, imges, transformEffect, speed);
-            if (pointer == 'left')
-                return startNavigation.insertElementInLeft();
+    $.fn.slider = function(element, imges, transformType, speed) {
+        this.click(function() {     
+            if ($('.'+element).is(':animated'))
+                return false;
 
-            return startNavigation.insertElementInRight();
+            var pointer = "right";
+            if ($(this).hasClass("next-left"))
+                pointer = "left";            
+
+            var slider = new CreateOptionsForStep({
+                pointer: pointer,
+                element: element,
+                imges: imges,
+                transformType: transformType,
+                speed: speed
+            });
+
+            if (pointer == 'left')
+                return slider.insertInLeft();
+
+            return slider.insertInRight();
         });
     };
 })(jQuery);
