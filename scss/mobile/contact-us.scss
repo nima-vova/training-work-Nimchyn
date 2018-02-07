@@ -1,13 +1,11 @@
 .contact-us {
-    text-align: center;
-    padding-top: 12%;
+    @include contact-us(12%);
 
     .contact-us-caption {
-        display: inline-block;
+        @include contact-us-caption;
+        margin-bottom: 12%;
         font-size: 42px;
         font-weight: 500;
-        margin-bottom: 12%;
-        border-bottom: 2px solid $corporate-color;
     }
 
     .contact-us-text {
@@ -15,6 +13,6 @@
         color: $main-color-font;
         font-size: 22px;
         margin-bottom: 26%;
-        padding: 0 4%;        
+        padding: 0 4%;
     }
 }

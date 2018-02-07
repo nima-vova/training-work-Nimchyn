@@ -6,32 +6,25 @@
 }
 
 .caption {
-    font-size: 26px;
-    font-weight: 500;
-    border-bottom: 2px solid $corporate-color;
+    @include caption;
 }
 
-.block-description {
+@mixin mobile-block-description {
     color: $main-color-font;
 }
 
 .main {
-    width: 35.6%;
-   /* width: 100%;*/
-    margin: 0 auto;
-    font-family: $font-family;
+    @include main(35.6%);
 }
 
 i.material-icons {
-    color: $corporate-color;
+    @include i-fa;
     font-size: 55px;
 }
 
 i.fa {
-    color: $corporate-color;
+    @include i-fa;
 }
-
-/*begin head*/
 
 .main-menu {
     display: inline;
@@ -45,3 +38,4 @@ i.fa {
 @import 'mobile/contact-us';
 @import 'mobile/contact-details';
 @import 'mobile/copyright';
+

@@ -1,59 +1,43 @@
 header {
-    background-color: $basic-color;
-    overflow: hidden;
+    @include header;
 
     .header-logo {
+        @include header-logo(22px, 500);
         float: left;
-        font-size: 22px;
-        font-weight: 500;
         margin: 2.4% auto 2.4% 8.2%;
     }
 
     .ui {
-        color: $corporate-color;
+        @include ui;
     }
 
     nav {
-        margin: 2.7% 7.7% auto 5%;
-        text-align: right;
-        font-size: 15px;
-        font-weight: 500;
-        float: right;
+        @include nav(2.7% 7.7% auto 5%, right, 15px, 500, right);
 
         .main-menu {
             i.material-icons {
-                font-size: 0;
+                @include i-material-icons(0);
             }
         }
 
         .menu-mobile {
-            visibility: hidden;
+            @include menu-mobile();
         }
 
         .menu-screen {
-            display: inline-block;
-            margin-right: 35px;
+            @include menu-screen(35px);
         }
 
         .menu-text {
-            position: relative;
-            display: block;
-
+            @include menu-text;
         }
 
-        .menu-text:hover{
-            border-bottom: 2px solid $corporate-color; 
+        .menu-text:hover {
+            @include menu-text-hover;
         }
 
-        .menu-text:hover:after {           
-             clear: both;
-             content: '';
-             position: absolute;             
-             top:  105%;
-             left: 42%;
-             border-left: 5px solid transparent;
-             border-right: 5px solid transparent;
-             border-top: 7px solid $corporate-color;       
-        }       
+        .menu-text:hover:after {
+            @include menu-text-hover-after;
+        }
     }
 }

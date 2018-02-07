@@ -1,40 +1,28 @@
 .main-content {
-    background-color: $basic-color;
-    text-align: center;
-    padding-top: 6%;
+    @include main-content(6%);
 
     .caption-text {
         @extend .block-description;
-        display: block;
-        margin: 5% auto;
-        padding: 0 14%;
+        @include caption-text(5% auto, 0 14%);
     }
 
     .content-body {
-        margin-bottom: -187px;
         margin-bottom: -24.5%;
+
     }
 
     .sections {
+        @include sections;
         width: 32%;
-        font-size: 12px;
-        font-weight: 100;
-        text-align: left;
         line-height: 1.5;
-        color: $main-color-font;
 
         i.sections-icons {
-            font-size: 35px;
-            display: block;
+            @include i-sections-icons;
             text-align: center;
         }
 
         .sections-text {
-            display: block;
-            text-align: center;
-            font-size: 20px;
-            margin: 4% auto;
-            color: $name-section-color;
+            @include sections-text;
         }
     }
 
@@ -63,8 +51,7 @@
 
     .project-text {
         @extend .block-description;
-        display: block;
-        margin-top: 20px;
+        @include project-text(20px);
     }
 
     .screen-project-text {
@@ -77,29 +64,15 @@
     }
 
     .portfolio {
-        padding: 0.2% 0.3% 0.1% 0.3%;
-        background: url(/img/portfolio-numbers-fond.png) 0 0 no-repeat;
-        background-size: 100% 99.7%;
-        letter-spacing: 0em;
-        text-align: right;
-        line-height: 1.6;
+        @include portfolio;
 
         .portfolio-name {
-            font-size: 15px;
-            font-weight: 500;
-            padding-right: 8%;
-            word-spacing: 10px;
-            line-height: 2;
-            color: $corporate-color;
+            @include portfolio-name;
         }
 
         .portfolio-text {
-            font-size: 11px;
-            font-weight: 500;
+            @include portfolio-text;
             padding-right: 8%;
-            word-spacing: 1.5px;
-            line-height: 2.5;
-            color: $main-color-font;
         }
     }
 

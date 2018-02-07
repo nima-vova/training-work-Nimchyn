@@ -1,42 +1,29 @@
 /* slides example*/
 .content-slider-example {
+    @include align-center;
+
+    .navigation-example {
+        @include navigation(5%);
+    }
+
+    .central-content-example {
+        @include central-content(10px, 300px, 200px);
+        background-color: $input-color-font;
         @include align-center;
 
-        .navigation-examle {            
-            @include inline-blocks;
-            margin-top: 5%;
-            text-align: center;
-        }
-
-        .central-content-examle {                        
-            padding-top: 10px; 
-            overflow: hidden;            
-            width: 300px;
-            height: 200px;
-            background-color: $input-color-font;
-            @include align-center;
-            //letter-spacing: 50px;
-
-            .slides-footer {
-                @include inline-blocks;
-                //padding: 50px auto 10px auto;                  
-                overflow: hidden;
-                text-align: center;
-            } 
-        }
-
-        .content-text {
-            display: block;
-            margin: 2.5% auto;
+        .slides-footer {
+            @include slides-step;
         }
     }
 
+    .content-text-example {
+        @include content-text;
+    }
+}
+
+/* end slides example*/
+
 .copyright {
+    @include copyright(18px, 300);
     margin: 32% auto 17% auto;
-    background-color: $corporate-color;
-    text-align: center;
-    color: $basic-color;
-    font-size: 18px;
-    font-weight: 300;
-    line-height: 56px;
 }

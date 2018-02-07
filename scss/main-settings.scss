@@ -16,6 +16,28 @@ label {
     display: none;
 }
 
+.block-description {
+    line-height: 1.5;
+    color: $main-color-font;
+    /*font-size: 14px; */
+}
+
+@mixin caption($font-size: 26px, $font-weight: 500) {
+    font-size: $font-size;
+    font-weight: $font-weight;
+    border-bottom: 2px solid $corporate-color;
+}
+
+@mixin main($width) {
+    width: $width;
+    margin: 0 auto;
+    font-family: $font-family;
+}
+
+@mixin i-fa {
+    color: $corporate-color;
+}
+
 @mixin align-center {
     text-align: center;
     white-space: nowrap;
@@ -28,3 +50,294 @@ label {
     white-space: normal;
     letter-spacing: normal;
 }
+
+/* start mixins for header */
+@mixin header {
+    background-color: $basic-color;
+    overflow: hidden;
+}
+
+@mixin header-logo($font-size, $font-weight) {
+    font-size: $font-size;
+    font-weight: $font-weight;
+}
+
+@mixin ui {
+    color: $corporate-color;
+}
+
+@mixin nav($margin, $text-align, $font-size, $font-weight, $float) {
+    margin: $margin;
+    text-align: $text-align;
+    font-size: $font-size;
+    font-weight: $font-weight;
+    float: $float;
+}
+
+@mixin i-material-icons($font-size) {
+    font-size: $font-size;
+}
+
+@mixin menu-mobile($visibility: hidden) {
+    visibility: $visibility;
+}
+
+@mixin menu-screen($margin-right, $display: inline-block) {
+    display: $display;
+    margin-right: $margin-right;
+}
+
+@mixin menu-text {
+    position: relative;
+    display: block;
+}
+
+@mixin menu-text-hover {
+    border-bottom: 2px solid $corporate-color;
+}
+
+@mixin menu-text-hover-after {
+    clear: both;
+    content: '';
+    position: absolute;
+    top: 105%;
+    left: 42%;
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    border-top: 7px solid $corporate-color;
+}
+
+/* end mixins for header */
+
+/*start mixins for slider*/
+@mixin content($letter-spacing, $padding-bottom) {
+    @include align-center;
+    background: url(/img/slider-img-tmp.jpg) 0 0 no-repeat;
+    background-size: cover;
+    letter-spacing: $letter-spacing;
+    padding-bottom: $padding-bottom;
+}
+
+@mixin navigation($margin-top) {
+    @include inline-blocks;
+    margin-top: $margin-top;
+    text-align: center;
+}
+
+@mixin central-content($padding-top, $width, $height) {
+    padding-top: $padding-top;
+    overflow: hidden;
+    width: $width;
+    height: $height;
+}
+
+@mixin slides-step {
+    @include inline-blocks;
+    overflow: hidden;
+    text-align: center;
+}
+
+@mixin content-text {
+    display: block;
+    margin: 2.1% auto;
+}
+
+@mixin footer($padding, $font-size: 18px, $font-weight: 500) {
+    background-color: $corporate-color;
+    color: $basic-color;
+    text-align: center;
+    font-size: $font-size;
+    font-weight: $font-weight;
+    padding: $padding;
+}
+
+@mixin text-footer($font-size: 24px) {
+    font-size: $font-size;
+    border-bottom: 1px solid $corporate-color;
+    color: $basic-color;
+}
+
+/*end mixins for slider*/
+
+/* start mixins for main-content */
+@mixin main-content($padding-top) {
+    background-color: $basic-color;
+    text-align: center;
+    padding-top: $padding-top;
+}
+
+@mixin caption-text($margin, $padding) {
+    display: block;
+    margin: $margin;
+    padding: $padding;
+}
+
+@mixin sections($font-size: 12px, $text-align: left) {
+    font-size: $font-size;
+    font-weight: 100;
+    text-align: $text-align;
+    color: $main-color-font;
+}
+
+@mixin i-sections-icons {
+    font-size: 35px;
+    display: block;
+}
+
+@mixin sections-text($font-size: 20px, $margin: 4% auto) {
+    display: block;
+    text-align: center;
+    font-size: $font-size;
+    margin: $margin;
+    color: $name-section-color;
+}
+
+@mixin project-text($margin-top: 27px) {
+    display: block;
+    margin-top: 27px;
+}
+
+@mixin portfolio {
+    background: url(/img/portfolio-numbers-fond.png) 0 0 no-repeat;
+    background-size: 100% 99.7%;
+    padding: 0.2% 0.3% 0.1% 0.3%;
+    letter-spacing: 0;
+    text-align: right;
+    line-height: 1.6;
+}
+
+@mixin portfolio-name {
+    font-size: 15px;
+    font-weight: 500;
+    padding-right: 8%;
+    word-spacing: 10px;
+    line-height: 2;
+    color: $corporate-color;
+}
+
+@mixin portfolio-text($font-size: 11px, $word-spacing: 1.5px, $line-height: 2.5) {
+    font-size: $font-size;
+    font-weight: 500;
+    word-spacing: $word-spacing;
+    line-height: $line-height;
+    color: $main-color-font;
+}
+
+/* end mixins for main-content */
+
+/* start mixins for talk-to-us */
+@mixin talk-to-us($padding-top, $padding-bottom: 9.3%) {
+    padding-top: $padding-top;
+    padding-bottom: $padding-bottom;
+    background-color: $talk-color;
+    text-align: center;
+    color: $basic-color;
+}
+
+@mixin talk {
+    display: inline-block;
+    font-size: 60px;
+}
+
+@mixin to-us {
+    color: $corporate-color;
+    font-size: 60px;
+}
+
+@mixin talk-text($margin) {
+    display: block;
+    margin: $margin;
+    line-height: 1.7em;
+    letter-spacing: 0.06em;
+}
+
+/* end mixins for talk-to-us */
+
+/* start mixins for contact-us */
+@mixin contact-us($padding-top) {
+    text-align: center;
+    padding-top: $padding-top;
+}
+
+@mixin contact-us-caption {
+    display: inline-block;
+    border-bottom: 2px solid $corporate-color;
+}
+
+@mixin contact-us-text($line-height) {
+    display: inline-block;
+    font-size: 14px;
+    line-height: $line-height;
+}
+
+/* end mixins for contact-us */
+
+/* start  mixins for contact-details */
+@mixin contact-caption($display, $text-align, $font-size) {
+    display: $display;
+    text-align: $text-align;
+    font-size: $font-size;
+    font-weight: 500;
+}
+
+@mixin contact-body($font-size: 15px, $font-weight: 400, $color: $main-color-font) {
+    text-align: left;
+    font-size: $font-size;
+    font-weight: $font-weight;
+    color: $color;
+}
+
+@mixin i-contact-icon($display: inline-block, $font-size: 20px) {
+    display: $display;
+    font-size: $font-size;
+    font-weight: 300;
+}
+
+@mixin contact-details-text($margin-left, $display: inline-block) {
+    display: $display;
+    margin-left: $margin-left;
+}
+
+@mixin contact-form($margin-left, $margin-right) {
+    margin-left: $margin-left;
+    margin-right: $margin-right;
+}
+
+@mixin contact-input($height, $width, $margin-bottom) {
+    font-size: 15px;
+    background-color: $input-color-font;
+    border: 1px solid $talk-color;
+    border-radius: 3px;
+    height: $height;
+    width: $width;
+    margin-bottom: $margin-bottom;
+}
+
+@mixin message($height) {
+    height: $height;
+    margin-bottom: 0;
+}
+
+@mixin contact-submit($padding, $font-size: 18px) {
+    padding: $padding;
+    background-color: $corporate-color;
+    border: 0;
+    color: $basic-color;
+    border-radius: 3px;
+    font-size: $font-size;
+    font-weight: 200;
+}
+
+/* end mixins for contact-details */
+
+/* start mixins for copyright */
+@mixin copyright($font-size, $font-weight) {
+    background-color: $corporate-color;
+    text-align: center;
+    color: $basic-color;
+    font-size: $font-size;
+    font-weight: $font-weight;
+    line-height: 56px;
+}
+
+/* end mixins for copyright */

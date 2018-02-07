@@ -1,17 +1,15 @@
 header {
-    overflow: hidden;
-    background-color: $basic-color;
+    @include header;
 }
 
 .header-logo {
-    font-size: 65px;
-    font-weight: 100;
+    @include header-logo(65px, 100);
     text-align: center;
     padding: 15.7% 0 17.2% 0;
 }
 
 .header-logo .ui {
-    color: $corporate-color;
+    @include ui;
 }
 
 nav {

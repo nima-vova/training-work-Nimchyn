@@ -14,22 +14,16 @@
         text-align: left;
 
         .contact-caption {
-            display: inline-block;
+            @include contact-caption(inline-block, left, 20px);
+            line-height: 1;
             padding-left: 1%;
             margin-bottom: 2.5%;
-            text-align: left;
-            font-size: 20px;
-            font-weight: 500;
-            line-height: 1;
         }
 
         .contact-body {
+            @include contact-body;
             padding-left: 8%;
             margin-bottom: 3.1%;
-            text-align: left;
-            font-size: 15px;
-            font-weight: 400;
-            color: $main-color-font;
         }
 
         .contact-body:nth-child(4) {
@@ -37,50 +31,33 @@
         }
 
         i.contact-icon {
-            display: inline-block;
-            font-size: 20px;
-            font-weight: 300;
+            @include i-contact-icon;
             float: left;
         }
 
         .contact-details-text {
-            display: inline-block;
-            margin-left: 5%;
+            @include contact-details-text(5%);
             line-height: 1.5;
         }
 
         .contact-form {
-            margin-left: 52px;
-            margin-right: 6px;
+            @include contact-form(52px, 6px);
 
             .contact-input {
-                display: block;
-                font-size: 15px;
+                @include contact-input(50px, 300px, 1.5%);
                 font-weight: 400;
-                background-color: $input-color-font;
-                border: 1px solid $talk-color;
-                border-radius: 3px;
-                margin-bottom: 1.5%;
-                width: 300px;
-                height: 50px;
+                display: block;
             }
 
             .message {
+                @include message(166px);
                 width: 527px;
-                height: 166px;
-                margin-bottom: 0;
             }
 
             .contact-submit {
-                display: block;
+                @include contact-submit(2% 7%);
                 margin-top: 3%;
-                padding: 2% 7%;
-                background-color: $corporate-color;
-                border: 0;
-                color: $basic-color;
-                border-radius: 3px;
-                font-size: 18px;
-                font-weight: 200;
+                display: block;
             }
         }
     }

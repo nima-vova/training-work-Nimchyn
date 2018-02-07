@@ -1,50 +1,31 @@
 .slider {
     .content {
-        @include align-center;
-        background: url(/img/slider-img-tmp.jpg)0 0 no-repeat;
-        background-size: cover;
-        letter-spacing: 50px;
-        padding-bottom: 21.8%;
+        @include content(50px, 21.8%);
 
         .navigation {
-            @include inline-blocks;
-            margin-top: 21%;
-            text-align: center;
+            @include navigation(21%)
         }
 
         .central-content {
-            padding-top: 3%;
-            overflow: hidden;
-            width: 470px;
-            height: 150px;
+            @include central-content(3%, 470px, 150px);
             letter-spacing: 50px;
 
             .slides-step {
-                @include inline-blocks;                 
-                overflow: hidden;
-                text-align: center;
-            } 
+                @include slides-step;
+            }
         }
 
         .content-text {
-            display: block;
-            margin: 2.1% auto;
+            @include content-text;;
         }
     }
 
     .footer {
-        background-color: $corporate-color;
-        color: $basic-color;
-        text-align: center;
-        font-size: 18px;
-        font-weight: 500;
-        padding: 4.65%;
+        @include footer(4.65%);
         word-spacing: 2px;
 
         .text-footer {
-            font-size: 24px;
-            border-bottom: 1px solid $basic-color;
-            color: $basic-color;
+            @include text-footer();
         }
     }
 }

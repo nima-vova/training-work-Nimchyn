@@ -13,18 +13,12 @@
         text-align: center;
 
         .contact-caption {
-            display: block;
+            @include contact-caption(block, center, 28px);
             margin-top: 10.3%;
-            text-align: center;
-            font-size: 28px;
-            font-weight: 550;
         }
 
         .contact-body {
-            text-align: left;
-            font-size: 15px;
-            font-weight: 400;
-            color: $main-color-font;
+            @include contact-body;
         }
 
         .contact-body:nth-child(4) {
@@ -48,56 +42,39 @@
         }
 
         i.contact-icon {
-            display: inline;
-            font-size: 20px;
-            font-weight: 300;
+            @include i-contact-icon(inline);
         }
 
         .contact-details-text {
-            display: inline;
-            margin-left: 8%;
-            line-height: 0em;
+            @include contact-details-text(8%, inline);
+            line-height: 0;
         }
 
         .contact-london {
             margin-left: 19%;
             margin-top: 1.5em;
-            margin-bottom: 0em;
+            margin-bottom: 0;
         }
 
         .contact-form {
+            @include contact-form(15%, 15%);
             margin-top: 9%;
-            margin-left: 15%;
-            margin-right: 15%;
 
             .contact-input {
+                @include contact-input(50px, 100%, 1.5%);
                 display: block;
-                font-size: 15px;
                 font-weight: 400;
-                background-color: $input-color-font;
-                border: 1px solid $talk-color;
-                border-radius: 3px;
-                margin-bottom: 1.5%;
-                width: 100%;
-                height: 50px;
             }
 
             .message {
+                @include message(166px);
                 width: 100%;
-                height: 166px;
-                margin-bottom: 0;
             }
 
             .contact-submit {
-                display: block;
+                @include contact-submit(2% 32%);
                 margin: 5.5% 12% auto 12%;
-                padding: 2% 32%;
-                background-color: $corporate-color;
-                border: 0;
-                color: $basic-color;
-                border-radius: 3px;
-                font-size: 18px;
-                font-weight: 200;
+                display: block;
             }
         }
     }

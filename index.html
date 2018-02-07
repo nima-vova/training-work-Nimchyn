@@ -9,194 +9,200 @@
     <link rel="stylesheet" media="screen and (max-width: 770px)" type="text/css" href="/css/mobile.css">
     <link rel="stylesheet" media="screen and (min-width: 770px) and (max-width: 992px)" type="text/css" href="/css/tablet.css">
     <link media="screen and (min-width: 992px)" rel="stylesheet" type="text/css" href="/css/desktop.css">
-    <script src="http://code.jquery.com/jquery-latest.min.js"></script>
-    <script src="/js/plagin-navigation.js"></script>
+    <script src="//code.jquery.com/jquery-latest.min.js"></script>
+    <script src="//code.jquery.com/ui/1.11.1/jquery-ui.min.js"></script>
+    <script src="/js/slider.js"></script>
     <title>Document</title>
     <script>
-    $(document).ready(function() {
-        // add a property (created by the plugin) element, pass the parameters: 
-        // pointer(left,right), element(animation block), array of slide images
-        // (if you do not pass the array, then defaults will be used), speed (if you do not pass 
-        // the speed, then defaults will be used),
-        // transform (the type of transformation during the animation, so far only the rotate, if // not specify,  then the animation will be without transformation)        
-        $(".next-left").startNavigation('left', 'slides-step', '', 'rotate', 5000);
-        $(".next-right").startNavigation('right', 'slides-step', '', 'rotate', 5000);
+        $(document).ready(function () {
 
-        var examleSlides = [
-            ['slide-example-1.png', 'slide-example-1.png'],
-            ['slide-example-2.png', 'slide-example-2.png'],
-            ['slide-example-3.png', 'slide-example-3.png'],
-            ['slide-example-4.png', 'slide-example-4.png']
-        ]
-        $(".next-left-footer").startNavigation('left', 'slides-footer', examleSlides);
-        $(".next-right-footer").startNavigation('right', 'slides-footer', examleSlides);
-    });
+            // add a property (created by the plugin) element, pass the parameters:
+            // element(animation block), array of slide images
+            // (if you do not pass the array, then defaults will be used), speed (if you do not pass
+            // the speed, then defaults will be used),
+            // transformType (the type of transformation during the animation, so far only the rotate,
+            // if not specify,  then the animation will be without transformation)
+            $(".next").slider({element: 'slides-step', transformType: 'rotate', speed: 5000});
+
+            var exampleSlides = [
+                ['slide-example-1.png', 'slide-example-1.png'],
+                ['slide-example-2.png', 'slide-example-2.png'],
+                ['slide-example-3.png', 'slide-example-3.png'],
+                ['slide-example-4.png', 'slide-example-4.png']
+            ];
+            $(".next-footer").slider({element: 'slides-footer', images: exampleSlides});
+        });
     </script>
 </head>
-
 <body>
-    <div class="main">
-        <header>
-            <nav>
-                <div class="main-menu">
-                    <a href="" onclick="return false" class="menu-mobile"> <i class="material-icons">menu</i></a>
-                    <a href="" onclick="return false" class="menu-screen"><span class="menu-text">HOME</span>            
+<div class="main">
+    <header>
+        <nav>
+            <div class="main-menu">
+                <a href="" onclick="return false" class="menu-mobile"> <i class="material-icons">menu</i></a>
+                <a href="" onclick="return false" class="menu-screen"><span class="menu-text">HOME</span>
+                </a>
+                <a href="" onclick="return false" class="menu-screen"><span class="menu-text">ABOUT US</span>
+                </a>
+                <a href="" onclick="return false" class="menu-screen"><span class="menu-text">SERVICES</span>
+                </a>
+                <a href="" onclick="return false" class="menu-screen"><span class="menu-text">PORTFOLIO</span>
+                </a>
+                <a href="" onclick="return false" class="menu-screen"><span class="menu-text">CONTACT US</span>
+                </a>
+            </div>
+        </nav>
+        <div class="header-logo"><span class="ui">UI</span>Brush</div>
+    </header>
+    <div class="slider">
+        <div class="content">
+            <a class="navigation next next-left" href="" onclick="return false">
+                <img alt="next left" class="next-content" src="img/br-next-left.png"></a>
+            <div class="navigation central-content">
+                <div class="slides-step" id="0-step">
+                    <a class="content-text" href="" onclick="return false">
+                        <img class="welcome-uibrush" alt="welcome" src="img/slider-text-welcome.png">
                     </a>
-                    <a href="" onclick="return false" class="menu-screen"><span class="menu-text">ABOUT US</span>                   
-                    </a>
-                    <a href="" onclick="return false" class="menu-screen"><span class="menu-text">SERVICES</span>                   
-                    </a>
-                    <a href="" onclick="return false" class="menu-screen"><span class="menu-text">PORTFOLIO</span>                  
-                    </a>
-                    <a href="" onclick="return false" class="menu-screen"><span class="menu-text">CONTACT US</span>
+                    <a class="content-text" href="" onclick="return false">
+                        <img class="welcome-uibrush" alt="we provide" src="img/slider-text-we-provide.png">
                     </a>
                 </div>
-            </nav>
-            <div class="header-logo"><span class="ui">UI</span>Brush</div>
-        </header>
-        <div class="slider">
-            <div class="content">
-                <a class="navigation next-left" href="" onclick="return false">
-<img alt="next left" class="next-content" src="img/br-next-left.png"></a>
-                <div class="navigation central-content">
-                    <div class="slides-step" id="0-step">
-                        <a class="content-text" href="" onclick="return false">
-<img class="welcome-uibrush" alt="welcome" src="img/slider-text-welcome.png">
-</a>
-                        <a class="content-text" href="" onclick="return false">
-<img  class="welcome-uibrush" alt="we provide" src="img/slider-text-we-provide.png">
-</a>
-                    </div>
-                </div>
-                <a class="navigation next-right" href="" onclick="return false">
-<img alt="next right"  class="next-content" src="img/br-next-right.png">
-</a>
             </div>
-            <div class="footer">
-                Lorem ipsum dolor sit amet <a class="text-footer" href="" onclick="return false">
-    CONSECTETUER ADIPISCING ELIT
-</a>
-            </div>
+            <a class="navigation next next-right" href="" onclick="return false">
+                <img alt="next right" class="next-content" src="img/br-next-right.png">
+            </a>
         </div>
-        <div class="main-content">
-            <span class="caption">UIBrush</span>
-            <span class="caption-text">
+        <div class="footer">
+            Lorem ipsum dolor sit amet <a class="text-footer" href="" onclick="return false">
+            CONSECTETUER ADIPISCING ELIT
+        </a>
+        </div>
+    </div>
+    <div class="main-content">
+        <span class="caption">UIBrush</span>
+        <span class="caption-text">
 Lorem ipsum dolor sit amet, consectetur adipisicing alit, sad do eiusmod tempor incididunt at labore eturet dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi at aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cilium. 
 </span>
-            <div class="content-body">
-                <div class="sections">
-                    <i class="material-icons sections-icons">view_list</i>
-                    <span class="sections-text">Innovative Design</span> Lorem ipsum dolor sit amet, consectetur adipisicing alit, sad do eiusmod tempor incididunt at labore eturet dolore magna aliqua.
-                </div>
-                <div class="sections">
-                    <i class="fa fa-code sections-icons"></i> <span class="sections-text">Clean Coding</span> Lorem ipsum dolor sit amet, consectetur adipisicing alit, sad do eiusmod tempor incididunt at labore eturet dolore magna aliqua.
-                </div>
-                <div class="sections">
-                    <i class="material-icons sections-icons">near_me</i>
-                    <span class="sections-text">Quick Delivery</span> Lorem ipsum dolor sit amet, consectetur adipisicing alit, sad do eiusmod tempor incididunt at labore eturet dolore magna aliqua.
-                </div>
-                <div class="sections">
-                    <i class="material-icons sections-icons">phone</i>
-                    <span class="sections-text">Best Support</span> Lorem ipsum dolor sit amet, consectetur adipisicing alit, sad do eiusmod tempor incididunt at labore eturet dolore magna aliqua.
-                </div>
+        <div class="content-body">
+            <div class="sections">
+                <i class="material-icons sections-icons">view_list</i>
+                <span class="sections-text">Innovative Design</span> Lorem ipsum dolor sit amet, consectetur adipisicing
+                alit, sad do eiusmod tempor incididunt at labore eturet dolore magna aliqua.
             </div>
-            <span class="caption">Recent Projects</span>
-            <span class="project-text">
+            <div class="sections">
+                <i class="fa fa-code sections-icons"></i> <span class="sections-text">Clean Coding</span> Lorem ipsum
+                dolor sit amet, consectetur adipisicing alit, sad do eiusmod tempor incididunt at labore eturet dolore
+                magna aliqua.
+            </div>
+            <div class="sections">
+                <i class="material-icons sections-icons">near_me</i>
+                <span class="sections-text">Quick Delivery</span> Lorem ipsum dolor sit amet, consectetur adipisicing
+                alit, sad do eiusmod tempor incididunt at labore eturet dolore magna aliqua.
+            </div>
+            <div class="sections">
+                <i class="material-icons sections-icons">phone</i>
+                <span class="sections-text">Best Support</span> Lorem ipsum dolor sit amet, consectetur adipisicing
+                alit, sad do eiusmod tempor incididunt at labore eturet dolore magna aliqua.
+            </div>
+        </div>
+        <span class="caption">Recent Projects</span>
+        <span class="project-text">
 Lorem ipsum dolor sit amet, consectetur adipisicing alit, sad dv eiusmod tempor incididunt at 
 </span>
-            <p class="screen-project-text">labore eturet dolore magna aliqua</p>
-            <div class="recent-projects">
-                <div class="portfolio">
-                    <img class="sections-caption" alt="portfolio one" src="img/portfolio-one.jpg">
-                    <p class="portfolio-name">Portfolio One</p>
-                    <p class="portfolio-text">Lorem ipsum dolor sit a met.</p>
-                </div>
-                <div class="portfolio">
-                    <img class="sections-caption" alt="portfolio two" src="img/portfolio-two.jpg">
-                    <p class="portfolio-name">Portfolio Two</p>
-                    <p class="portfolio-text">Lorem ipsum dolor sit a met.</p>
-                </div>
-                <div class="portfolio">
-                    <img class="sections-caption" alt="portfolio three" src="img/portfolio-three.jpg">
-                    <p class="portfolio-name">Portfolio Three</p>
-                    <p class="portfolio-text">Lorem ipsum dolor sit a met.</p>
-                </div>
-                <div class="portfolio">
-                    <img class="sections-caption" alt="portfolio four" src="img/portfolio-four.jpg">
-                    <p class="portfolio-name">Portfolio Four</p>
-                    <p class="portfolio-text">Lorem ipsum dolor sit a met.</p>
-                </div>
+        <p class="screen-project-text">labore eturet dolore magna aliqua</p>
+        <div class="recent-projects">
+            <div class="portfolio">
+                <img class="sections-caption" alt="portfolio one" src="img/portfolio-one.jpg">
+                <p class="portfolio-name">Portfolio One</p>
+                <p class="portfolio-text">Lorem ipsum dolor sit a met.</p>
+            </div>
+            <div class="portfolio">
+                <img class="sections-caption" alt="portfolio two" src="img/portfolio-two.jpg">
+                <p class="portfolio-name">Portfolio Two</p>
+                <p class="portfolio-text">Lorem ipsum dolor sit a met.</p>
+            </div>
+            <div class="portfolio">
+                <img class="sections-caption" alt="portfolio three" src="img/portfolio-three.jpg">
+                <p class="portfolio-name">Portfolio Three</p>
+                <p class="portfolio-text">Lorem ipsum dolor sit a met.</p>
+            </div>
+            <div class="portfolio">
+                <img class="sections-caption" alt="portfolio four" src="img/portfolio-four.jpg">
+                <p class="portfolio-name">Portfolio Four</p>
+                <p class="portfolio-text">Lorem ipsum dolor sit a met.</p>
             </div>
         </div>
-        <div class="talk-to-us">
-            <span class="talk">Talk</span>
-            <span class="to-us">To Us</span>
-            <span class="talk-text">Et harum quidem rerum facilis est at expedita distinctio. Nam libero tempore, cum soluta nobis est eligendi optio nihil impedit quo facilis est at expedita distinctio minus id quod maxima placeat facere possimus, omnis voluptas assumenda est. 
+    </div>
+    <div class="talk-to-us">
+        <span class="talk">Talk</span>
+        <span class="to-us">To Us</span>
+        <span class="talk-text">Et harum quidem rerum facilis est at expedita distinctio. Nam libero tempore, cum soluta nobis est eligendi optio nihil impedit quo facilis est at expedita distinctio minus id quod maxima placeat facere possimus, omnis voluptas assumenda est.
 </span>
-        </div>
-        <div class="contact-us">
-            <span class="caption contact-us-caption">Contact Us</span>
-            <span class="contact-us-text">Lorem ipsum dolor sit amet, consectetur adipisicing alit, sad do eiusmod tempor ut labore eturet dolore magna aliqua. Ut enim ad minim veniam, quis nostrud 
+    </div>
+    <div class="contact-us">
+        <span class="caption contact-us-caption">Contact Us</span>
+        <span class="contact-us-text">Lorem ipsum dolor sit amet, consectetur adipisicing alit, sad do eiusmod tempor ut labore eturet dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
 connotation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cilium. Lorem ipsum dolor 
 
 sit amet, consectetur adipisicing alit, sad do eiusmod tempor at labore eturet dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
 laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cilium.
 </span>
-        </div>
-        <div class="contact-details">
-            <img class="contact-map" alt="map" src="img/map.jpg">
-            <div class="contact-description">
+    </div>
+    <div class="contact-details">
+        <img class="contact-map" alt="map" src="img/map.jpg">
+        <div class="contact-description">
                 <span class="contact-caption">
                         Contact Details
                     </span>
-                <div class="contact-body">
-                    <i class="material-icons contact-icon">call</i>
-                    <div class="contact-details-text"> (+91) 0975 720 3582
-                    </div>
-                </div>
-                <div class="contact-body">
-                    <i class="material-icons contact-icon">mail_outline</i>
-                    <div class="contact-details-text"> Email@domain.com
-                    </div>
-                </div>
-                <div class="contact-body">
-                    <i class="material-icons contact-icon">location_on</i>
-                    <div class="contact-details-text">No.235, New St, 25° Sector,
-                        <p class="contact-london">London, England</p>
-                    </div>
-                </div>
-                <form class="contact-form" action="index.html">
-                    <label for="name-text">Name</label>
-                    <input type="text" class="contact-input" name="name" size="32" id="name-text" placeholder="Name" />
-                    <label for="email-text">email</label>
-                    <input type="text" name="email" class="contact-input" placeholder="Email" id="email-text" size="32">
-                    <label for="message-text">message</label>
-                    <input type="text" name="message" class="contact-input message" placeholder="Message" id="message-text" size="32">
-                    <button class="contact-submit">Submit</button>
-                </form>
-            </div>
-        </div>
-        <div class="content-slider-example">
-            <a class="navigation-examle next-left-footer" href="" onclick="return false">
-<img alt="next left" class="next-content" src="img/br-next-left.png"></a>
-            <div class="navigation-examle central-content-examle">
-                <div class="slides-footer" id="0-step-footer">
-                    <a class="content-text" href="" onclick="return false">
-<img class="welcome-uibrush" alt="welcome" src="img/slide-example-1.png">
-</a>
-                    <a class="content-text" href="" onclick="return false">
-<img  class="welcome-uibrush" alt="we provide" src="img/slide-example-1.png">
-</a>
+            <div class="contact-body">
+                <i class="material-icons contact-icon">call</i>
+                <div class="contact-details-text"> (+91) 0975 720 3582
                 </div>
             </div>
-            <a class="navigation-examle next-right-footer" href="" onclick="return false">
-<img alt="next right"  class="next-content" src="img/br-next-right.png">
-</a>
-        </div>
-        <div class="copyright">
-            Copyright&#169;2015 Default Value
+            <div class="contact-body">
+                <i class="material-icons contact-icon">mail_outline</i>
+                <div class="contact-details-text"> Email@domain.com
+                </div>
+            </div>
+            <div class="contact-body">
+                <i class="material-icons contact-icon">location_on</i>
+                <div class="contact-details-text">No.235, New St, 25° Sector,
+                    <p class="contact-london">London, England</p>
+                </div>
+            </div>
+            <form class="contact-form" action="index.html">
+                <label for="name-text">Name</label>
+                <input type="text" class="contact-input" name="name" size="32" id="name-text" placeholder="Name"/>
+                <label for="email-text">email</label>
+                <input type="text" name="email" class="contact-input" placeholder="Email" id="email-text" size="32">
+                <label for="message-text">message</label>
+                <input type="text" name="message" class="contact-input message" placeholder="Message" id="message-text"
+                       size="32">
+                <button class="contact-submit">Submit</button>
+            </form>
         </div>
     </div>
+    <div class="content-slider-example">
+        <a class="navigation-example next-footer next-left" href="" onclick="return false">
+            <img alt="next left" class="next-content" src="img/br-next-left.png"></a>
+        <div class="navigation-example central-content-example">
+            <div class="slides-footer" id="0-step-footer">
+                <a class="content-text-example" href="" onclick="return false">
+                    <img class="welcome-uibrush" alt="welcome" src="img/slide-example-1.png">
+                </a>
+                <a class="content-text-example" href="" onclick="return false">
+                    <img class="welcome-uibrush" alt="we provide" src="img/slide-example-1.png">
+                </a>
+            </div>
+        </div>
+        <a class="navigation-example next-footer next-right" href="" onclick="return false">
+            <img alt="next right" class="next-content" src="img/br-next-right.png">
+        </a>
+    </div>
+    <div class="copyright">
+        Copyright&#169;2015 Default Value
+    </div>
+</div>
 </body>
 
 </html>

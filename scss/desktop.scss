@@ -2,26 +2,15 @@
 @import 'main-settings';
 
 .caption {
-    font-size: 26px;
-    font-weight: 500;
-    border-bottom: 2px solid $corporate-color;
-}
-
-.block-description {
-    line-height: 1.5;
-    color: $main-color-font;
-    /*font-size: 14px; */
+    @include caption;
 }
 
 .main {
-    width: 1344px;
-    margin: 0 auto;
-    font-family: $font-family;
+    @include main(1344px);
 }
 
-i.material-icons,
-i.fa {
-    color: $corporate-color;
+i.material-icons, i.fa {
+    @include i-fa;
 }
 
 @import 'desktop/header';
@@ -31,3 +20,4 @@ i.fa {
 @import 'desktop/contact-us';
 @import 'desktop/contact-details';
 @import 'desktop/copyright';
+

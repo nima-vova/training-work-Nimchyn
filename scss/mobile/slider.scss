@@ -1,29 +1,17 @@
 .slider {
     .content {
-        @include align-center;
-        background: url(/img/slider-img-tmp.jpg)0 0 no-repeat;
-        background-size: cover;
-        /*letter-spacing: 65px;*/
-        letter-spacing: auto;
-        padding-bottom: 20%;
+        @include content(normal, 20%);
 
         .navigation {
-            @include inline-blocks;
-            margin-top: 27%;
-            text-align: center;
+            @include navigation(27%)
         }
 
         .central-content {
-            padding-top: 1%;
-            overflow: hidden;
+            @include central-content(1%, 250px, 70px);
             @include align-center;
-            width: 250px;
-            height: 70px;
-            
+
             .slides-step {
-                @include inline-blocks;                 
-                overflow: hidden;
-                text-align: center;
+                @include slides-step;
             }
         }
 
@@ -38,25 +26,18 @@
 
         .welcome-uibrush {
             /*max-width: 250px;*/
-           max-width: 250px;
+            max-width: 250px;
             height: auto;
             padding-bottom: 5%;
         }
     }
 
     .footer {
-        background-color: $corporate-color;
-        color: $basic-color;
-        text-align: center;
-        font-size: 14px;
-        font-weight: 700;
-        padding: 5.5%;
+        @include footer(5.5%, 14px, 700);
 
         .text-footer {
-            font-size: 14px;
-            color: $basic-color;
+            @include text-footer(14px);
             font-weight: 600;
-            border-bottom: 1px solid $basic-color;
         }
     }
 }

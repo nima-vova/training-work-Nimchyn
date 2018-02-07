@@ -1,78 +1,55 @@
-    .contact-details {
-        .contact-map {
-            display: inline-block;
-            width: 100%;
-            height: 520px;
+.contact-details {
+    .contact-map {
+        display: inline-block;
+        width: 100%;
+        height: 520px;
+    }
+
+    .contact-description {
+        .contact-caption {
+            @include contact-caption(block, center, 42px);
+            line-height: 1.5;
+            border-bottom: 2px solid $corporate-color;
+            margin: 14% 15% 16% 15%;
         }
 
-        .contact-description {
-            .contact-caption {
-                display: block;
-                text-align: center;
-                margin: 14% 15% 16% 15%;
-                font-size: 42px;
-                font-weight: 500;
-                line-height: 1.5;
-                border-bottom: 2px solid $corporate-color;
+        .contact-body {
+            @include contact-body(26px, 300, $talk-color);
+            padding-left: 11%;
+            margin-bottom: 10%;
+
+            i.contact-icon {
+                @include i-contact-icon($font-size: 30px);
+                float: left;
             }
 
-            .contact-body {
-                padding-left: 11%;
-                margin-bottom: 10%;
-                text-align: left;
-                font-size: 26px;
-                font-weight: 300;
-                color: $talk-color;
+            .contact-details-text {
+                @include contact-details-text(10%);
+                width: 70%;
+            }
+        }
 
-                i.contact-icon {
-                    font-size: 30px;
-                    font-weight: 300;
-                    display: inline-block;
-                    float: left;
-                }
+        .contact-body:nth-child(4) {
+            margin-bottom: 4%;
+        }
 
-                .contact-details-text {
-                    display: inline-block;
-                    margin-left: 10%;
-                    width: 70%;
-                }
+        .contact-form {
+            @include contact-form(5%, 15%);
+
+            .contact-input {
+                @include contact-input(33px, 100%, 2.5%);
+                margin-left: 1%;
+                padding: 2% 7%;
             }
 
-            .contact-body:nth-child(4) {
-                margin-bottom: 4%;
+            .message {
+                @include message(150px);
             }
 
-            .contact-form {
-                margin-left: 5%;
-                margin-right: 15%;
-
-                .contact-input {
-                    padding: 2% 7%;
-                    font-size: 15px;
-                    background-color: $input-color-font;
-                    border: 1px solid $talk-color;
-                    height: 33px;
-                    width: 100%;
-                    border-radius: 3px;
-                    margin-left: 1%;
-                    margin-bottom: 2.5%;
-                }
-
-                .message {
-                    height: 150px;
-                    margin-bottom: 0;
-                }
-
-                .contact-submit {
-                    margin: 7% 16% auto 15.5%;
-                    padding: 2.7% 33%;
-                    background-color: $corporate-color;
-                    border: 0;
-                    color: $basic-color;
-                    border-radius: 3px;
-                    font-size: 20px;
-                    font-weight: 200;
-                }
+            .contact-submit {
+                @include contact-submit(2.7% 33%, 20px);
+                margin: 7% 16% auto 15.5%;
             }
         }
     }
+}

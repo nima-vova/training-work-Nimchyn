@@ -1,18 +1,14 @@
 .contact-us {
-    text-align: center;
-    padding-top: 10%;
+    @include contact-us(10%);
     letter-spacing: 0.02em;
 
     .contact-us-caption {
-        display: inline-block;
-        border-bottom: 2px solid $corporate-color;
+        @include contact-us-caption;
     }
 
     .contact-us-text {
         @extend .block-description;
-        display: inline-block;
-        font-size: 14px;
-        line-height: 1.8em;
+        @include contact-us-text(1.8em);
         margin: 4.3% 12% auto 12%;
     }
 }

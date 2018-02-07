@@ -1,18 +1,12 @@
 .talk-to-us {
-    padding-top: 16%;
-    padding-bottom: 0.5%;
-    background-color: $talk-color;
-    text-align: center;
-    color: $basic-color;
+    @include talk-to-us(16%, 0.5%);
 
     .talk {
-        display: inline-block;
-        font-size: 60px;
+        @include talk;
     }
 
     .to-us {
-        color: $corporate-color;
-        font-size: 60px;
+        @include to-us;
     }
 
     .talk-text {
